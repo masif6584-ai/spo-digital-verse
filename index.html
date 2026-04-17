@@ -5,374 +5,263 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Asif Ali | CEO - SPO Smart Digital Verse</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Noto+Sans+Urdu:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
         :root {
             --primary: #00f2ff;
-            --secondary: #7000ff;
-            --dark-deep: #020617;
+            --accent: #7000ff;
+            --bg: #010409;
             --glass: rgba(255, 255, 255, 0.03);
-            --border: rgba(255, 255, 255, 0.08);
-            --text-dim: #94a3b8;
+            --border: rgba(255, 255, 255, 0.1);
+            --text-p: #8b949e;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
-        body { background-color: var(--dark-deep); color: #fff; overflow-x: hidden; scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg); color: #fff; overflow-x: hidden; }
         .urdu { font-family: 'Noto Sans Urdu', sans-serif; direction: rtl; }
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 10px; }
-        ::-webkit-scrollbar-track { background: var(--dark-deep); }
-        ::-webkit-scrollbar-thumb { background: linear-gradient(var(--primary), var(--secondary)); border-radius: 5px; }
-
-        /* Background Effects */
-        .orb {
-            position: fixed; width: 600px; height: 600px; border-radius: 50%;
-            background: radial-gradient(circle, rgba(0, 242, 255, 0.1) 0%, transparent 70%);
-            z-index: -1; filter: blur(80px);
-        }
-        .orb-1 { top: -200px; left: -200px; }
-        .orb-2 { bottom: -200px; right: -200px; }
-
-        /* Header & Navigation */
+        /* --- STICKY NAV --- */
         nav {
-            position: fixed; top: 0; width: 100%; padding: 25px 5%;
+            position: fixed; top: 0; width: 100%; padding: 20px 5%;
             display: flex; justify-content: space-between; align-items: center;
-            background: rgba(2, 6, 23, 0.8); backdrop-filter: blur(20px);
+            background: rgba(1, 4, 9, 0.8); backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border); z-index: 1000;
         }
-        .logo-box { font-size: 1.6rem; font-weight: 800; letter-spacing: 2px; }
-        .logo-box span { color: var(--primary); }
-        .nav-links ul { display: flex; list-style: none; gap: 30px; }
-        .nav-links a { color: #fff; text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: 0.3s; }
-        .nav-links a:hover { color: var(--primary); text-shadow: 0 0 10px var(--primary); }
-
-        /* Hero Section (Expanded) */
-        .hero {
-            min-height: 100vh; display: flex; align-items: center; justify-content: center;
-            text-align: center; padding: 150px 20px 100px;
-        }
-        .hero-inner { max-width: 1000px; }
-        .badge {
-            background: rgba(0, 242, 255, 0.1); color: var(--primary);
-            padding: 8px 20px; border-radius: 100px; font-weight: 600;
-            font-size: 0.85rem; border: 1px solid var(--primary); margin-bottom: 30px; display: inline-block;
-        }
-        .hero h1 { font-size: clamp(3rem, 10vw, 6.5rem); font-weight: 800; line-height: 0.9; margin-bottom: 30px; }
-        .hero h1 span {
-            background: linear-gradient(to right, #fff, var(--primary));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        }
-        .hero p { font-size: 1.3rem; color: var(--text-dim); margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; }
-
-        .btn-group { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
-        .main-btn {
-            background: var(--primary); color: #000; padding: 18px 45px; border-radius: 12px;
-            font-weight: 700; text-decoration: none; transition: 0.4s; box-shadow: 0 15px 30px rgba(0, 242, 255, 0.2);
-        }
-        .sec-btn {
-            background: transparent; color: #fff; padding: 18px 45px; border-radius: 12px;
-            font-weight: 700; text-decoration: none; border: 1px solid var(--border); transition: 0.4s;
-        }
-        .main-btn:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0, 242, 255, 0.4); }
-
-        /* Section Styling */
-        section { padding: 120px 8%; }
-        .sec-header { margin-bottom: 70px; text-align: center; }
-        .sec-header h2 { font-size: 3rem; font-weight: 800; margin-bottom: 15px; }
-        .sec-header p { color: var(--text-dim); font-size: 1.1rem; }
-
-        /* Grid Layouts */
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-
-        /* Service Cards (CEO Style) */
-        .service-card {
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); letter-spacing: 2px; }
+        .nav-links { display: flex; list-style: none; gap: 10px; }
+        
+        .nav-btn {
             background: var(--glass); border: 1px solid var(--border);
-            padding: 50px; border-radius: 30px; transition: 0.5s;
-            position: relative; overflow: hidden;
+            color: #fff; padding: 10px 18px; border-radius: 12px;
+            cursor: pointer; font-size: 0.85rem; font-weight: 600;
+            transition: 0.3s;
         }
-        .service-card::before {
-            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            opacity: 0; transition: 0.5s;
-        }
-        .service-card:hover { transform: translateY(-15px); border-color: var(--primary); }
-        .service-card:hover::before { opacity: 1; }
-        .service-card i { font-size: 3.5rem; color: var(--primary); margin-bottom: 25px; display: block; }
-        .service-card h3 { font-size: 1.8rem; margin-bottom: 15px; }
-        .service-card p { color: var(--text-dim); line-height: 1.7; }
+        .nav-btn:hover { background: var(--primary); color: #000; transform: translateY(-3px); }
 
-        /* Local Shop Section (NADRA/FBR Focus) */
-        .local-box {
-            background: linear-gradient(135deg, rgba(112, 0, 255, 0.05) 0%, transparent 100%);
-            border-radius: 40px; padding: 60px; border: 1px solid var(--border);
+        /* --- HERO --- */
+        .hero {
+            height: 100vh; display: flex; flex-direction: column; justify-content: center;
+            align-items: center; text-align: center; padding: 0 10%;
+            background: radial-gradient(circle at center, rgba(0, 242, 255, 0.05) 0%, transparent 70%);
         }
-        .local-item { display: flex; gap: 25px; margin-bottom: 40px; align-items: flex-start; }
-        .local-icon { width: 60px; height: 60px; background: var(--primary); border-radius: 15px; display: flex; align-items: center; justify-content: center; color: #000; font-size: 1.5rem; flex-shrink: 0; }
+        .hero h1 { font-size: clamp(2.5rem, 8vw, 5rem); font-weight: 800; margin-bottom: 20px; }
+        .hero h1 span { color: var(--primary); text-shadow: 0 0 30px rgba(0, 242, 255, 0.2); }
+        .hero p { color: var(--text-p); max-width: 700px; font-size: 1.2rem; }
 
-        /* Portfolio / Experience Section */
-        .exp-card {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 30px; border-bottom: 1px solid var(--border); transition: 0.3s;
+        /* --- VIRTUAL PAGES (OVERLAYS) --- */
+        .page-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--bg); z-index: 2000;
+            display: none; flex-direction: column;
+            padding: 100px 10% 50px; overflow-y: auto;
         }
-        .exp-card:hover { background: rgba(255,255,255,0.02); padding-left: 40px; }
-        .exp-info h4 { font-size: 1.5rem; color: var(--primary); }
+        .page-overlay.active { display: flex; animation: slideUp 0.5s ease forwards; }
 
-        /* Statistics Footer-ish */
-        .stats-bar {
-            display: flex; justify-content: space-around; flex-wrap: wrap;
-            padding: 80px 5%; background: rgba(255,255,255,0.01); border-top: 1px solid var(--border);
+        @keyframes slideUp {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
-        .stat-node { text-align: center; }
-        .stat-node h5 { font-size: 3.5rem; font-weight: 800; color: #fff; }
-        .stat-node p { color: var(--primary); font-weight: 600; letter-spacing: 2px; }
 
-        /* Final Massive Footer */
-        footer { background: #01040a; padding: 100px 8% 50px; border-top: 1px solid var(--border); }
-        .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 50px; margin-bottom: 80px; }
-        .footer-logo h2 { font-size: 2rem; margin-bottom: 20px; }
-        .footer-links h4 { margin-bottom: 25px; font-size: 1.2rem; border-left: 3px solid var(--primary); padding-left: 10px; }
-        .footer-links ul { list-style: none; }
-        .footer-links li { margin-bottom: 12px; }
-        .footer-links a { color: var(--text-dim); text-decoration: none; transition: 0.3s; }
-        .footer-links a:hover { color: var(--primary); padding-left: 5px; }
+        .close-page {
+            position: fixed; top: 30px; right: 5%;
+            background: var(--primary); color: #000;
+            width: 50px; height: 50px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; cursor: pointer; z-index: 3000; font-weight: 800;
+        }
 
-        .social-circle {
-            display: flex; gap: 15px; margin-top: 25px;
-        }
-        .social-circle a {
-            width: 45px; height: 45px; background: var(--glass); border: 1px solid var(--border);
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            color: #fff; text-decoration: none; transition: 0.4s;
-        }
-        .social-circle a:hover { background: var(--primary); color: #000; transform: scale(1.1); }
+        .page-content { max-width: 1000px; margin: 0 auto; width: 100%; }
+        .page-title { font-size: 3rem; margin-bottom: 30px; color: var(--primary); border-bottom: 2px solid var(--border); padding-bottom: 20px; }
+        
+        /* Grid for details */
+        .detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .detail-card { background: var(--glass); border: 1px solid var(--border); padding: 30px; border-radius: 20px; }
+        .detail-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
 
-        /* WhatsApp Floating */
-        .wa-float {
-            position: fixed; bottom: 40px; right: 40px; width: 65px; height: 65px;
-            background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            color: #fff; font-size: 2.2rem; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); z-index: 999;
-            transition: 0.3s; animation: pulse 2s infinite;
-        }
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+        /* --- CONTACT SECTION --- */
+        .contact-bar { margin-top: 50px; padding: 40px; background: rgba(0, 242, 255, 0.05); border-radius: 30px; text-align: center; }
+        .wa-link { background: #25d366; color: #fff; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 20px; }
 
-        @media (max-width: 992px) {
-            .footer-top { grid-template-columns: 1fr 1fr; }
-            .hero h1 { font-size: 4rem; }
+        /* Floating Stats (CEO Style) */
+        .stats-footer {
+            position: fixed; bottom: 20px; left: 5%; width: 90%;
+            background: rgba(255, 255, 255, 0.01); backdrop-filter: blur(10px);
+            border: 1px solid var(--border); border-radius: 50px;
+            padding: 10px 30px; display: flex; justify-content: space-around; font-size: 0.8rem; color: var(--text-p);
         }
-        @media (max-width: 600px) {
-            .nav-links { display: none; }
-            .footer-top { grid-template-columns: 1fr; }
-            section { padding: 80px 5%; }
+
+        @media (max-width: 768px) {
+            nav { flex-direction: column; padding: 15px; }
+            .nav-links { margin-top: 15px; flex-wrap: wrap; justify-content: center; }
+            .hero h1 { font-size: 2.5rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-
     <nav>
-        <div class="logo-box">SPO <span>VERSE</span></div>
-        <div class="nav-links">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Digital Services</a></li>
-                <li><a href="#local">Local Shop</a></li>
-                <li><a href="#about">The CEO</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+        <div class="logo">SPO VERSE</div>
+        <ul class="nav-links">
+            <li><button class="nav-btn" onclick="togglePage('web-page')"><i class="fas fa-code"></i> WEB DEV</button></li>
+            <li><button class="nav-btn" onclick="togglePage('seo-page')"><i class="fas fa-rocket"></i> SEO</button></li>
+            <li><button class="nav-btn" onclick="togglePage('shop-page')"><i class="fas fa-store"></i> SPO SHOP</button></li>
+            <li><button class="nav-btn" onclick="togglePage('contact-page')"><i class="fas fa-envelope"></i> CONTACT</button></li>
+        </ul>
     </nav>
 
-    <section class="hero" id="home">
-        <div class="hero-inner" data-aos="zoom-in">
-            <div class="badge">#1 Digital Agency in Kanganpur</div>
-            <h1>The New Era of <span>Digital Business</span></h1>
-            <p>Muhammad Asif Ali leads <b>SPO Smart Digital Verse</b>. We don't just build websites; we build digital empires using advanced SEO, high-end development, and local expertise.</p>
-            <div class="btn-group">
-                <a href="https://wa.me/923034480404" class="main-btn">Start a Project</a>
-                <a href="#services" class="sec-btn">View My Work</a>
-            </div>
+    <section class="hero">
+        <h2 style="font-size: 1rem; color: var(--primary); letter-spacing: 4px; margin-bottom: 10px;">MUHAMMAD ASIF ALI | CEO</h2>
+        <h1>Building the <span>Digital Verse</span></h1>
+        <p>I architect high-performance websites and scale local businesses to global search rankings. Explore my professional ecosystem using the navigation above.</p>
+        <div style="margin-top: 40px;">
+            <i class="fas fa-chevron-down" style="color: var(--primary); font-size: 2rem; animation: bounce 2s infinite;"></i>
         </div>
     </section>
 
-    <div class="stats-bar">
-        <div class="stat-node" data-aos="fade-up">
-            <h5>150+</h5>
-            <p>HAPPY CLIENTS</p>
-        </div>
-        <div class="stat-node" data-aos="fade-up" data-aos-delay="100">
-            <h5>05+</h5>
-            <p>YEARS EXP</p>
-        </div>
-        <div class="stat-node" data-aos="fade-up" data-aos-delay="200">
-            <h5>100%</h5>
-            <p>SEO RANKING</p>
-        </div>
-        <div class="stat-node" data-aos="fade-up" data-aos-delay="300">
-            <h5>24/7</h5>
-            <p>TECH SUPPORT</p>
+    <div id="web-page" class="page-overlay">
+        <div class="close-page" onclick="togglePage('web-page')">&times;</div>
+        <div class="page-content">
+            <h2 class="page-title">Professional Web Architecture</h2>
+            <p style="font-size: 1.2rem; color: var(--text-p);">CEO-grade development focusing on Single Page Applications (SPA) and high-end UI/UX.</p>
+            
+            <div class="detail-grid">
+                <div class="detail-card">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>SPA Architecture</h3>
+                    <p>Reload-free browsing experience using advanced JavaScript logic.</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Speed Optimization</h3>
+                    <p>90+ Google PageSpeed score guaranteed for better user retention.</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-shield-halved"></i>
+                    <h3>Firebase Backend</h3>
+                    <p>Real-time data handling and high-security deployment via GitHub.</p>
+                </div>
+            </div>
+            
+            <div class="contact-bar">
+                <h3>Want an International Level Website?</h3>
+                <a href="https://wa.me/923034480404" class="wa-link">Book a Consultation</a>
+            </div>
         </div>
     </div>
 
-    <section id="services">
-        <div class="sec-header" data-aos="fade-up">
-            <h2 class="urdu">ڈیجیٹل مارکیٹنگ اور ویب سروسز</h2>
-            <h2>Premium Agency Solutions</h2>
-            <p>International standard services delivered with local precision.</p>
-        </div>
-
-        <div class="grid-container">
-            <div class="service-card" data-aos="fade-up">
-                <i class="fa-solid fa-code"></i>
-                <h3>Web Architecture</h3>
-                <p>Developing high-speed Single Page Applications (SPA) with futuristic Glassmorphism UI. We use GitHub and Firebase for robust data management.</p>
-            </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                <i class="fa-solid fa-arrow-trend-up"></i>
-                <h3>SEO Supremacy</h3>
-                <p>Dominating Google search results for Kanganpur area. From Google Search Console setup to advanced keyword strategies.</p>
-            </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                <i class="fa-solid fa-bullseye"></i>
-                <h3>Performance Ads</h3>
-                <p>Scaling your sales through targeted TikTok, Facebook, and Instagram ad campaigns with high ROI branding.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="local" style="background: rgba(255,255,255,0.01);">
-        <div class="sec-header" data-aos="fade-up">
-            <h2 class="urdu">ون ونڈو سلوشن (SPO Shop)</h2>
-            <h2>Kanganpur Local Services Hub</h2>
-        </div>
-
-        <div class="local-box" data-aos="fade-right">
-            <div class="grid-container">
-                <div class="local-item">
-                    <div class="local-icon"><i class="fa-solid fa-id-card"></i></div>
-                    <div>
-                        <h4 class="urdu">نادرا اور سرکاری دستاویزات</h4>
-                        <p class="urdu">شناختی کارڈ گائیڈنس، ڈومیسائل، اور تمام آن لائن سرکاری سہولیات۔</p>
-                    </div>
+    <div id="seo-page" class="page-overlay">
+        <div class="close-page" onclick="togglePage('seo-page')">&times;</div>
+        <div class="page-content">
+            <h2 class="page-title">Search Supremacy</h2>
+            <p style="font-size: 1.2rem; color: var(--text-p);">Dominating local and global search results through data-driven strategies.</p>
+            
+            <div class="detail-grid">
+                <div class="detail-card">
+                    <i class="fas fa-location-dot"></i>
+                    <h3>Local SEO</h3>
+                    <p>Rank #1 in Kanganpur and Kasur District for your services.</p>
                 </div>
-                <div class="local-item">
-                    <div class="local-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-                    <div>
-                        <h4 class="urdu">ایف بی آر اور ٹیکس سروسز</h4>
-                        <p class="urdu">NTN رجسٹریشن، انکم ٹیکس فائلنگ، اور IRIS پورٹل مینجمنٹ۔</p>
-                    </div>
+                <div class="detail-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Technical Audit</h3>
+                    <p>Fixing crawl errors, sitemaps, and indexing issues via Search Console.</p>
                 </div>
-                <div class="local-item">
-                    <div class="local-icon"><i class="fa-solid fa-print"></i></div>
-                    <div>
-                        <h4 class="urdu">پروفیشنل پرنٹنگ</h4>
-                        <p class="urdu">معیاری کلر پرنٹنگ، فوٹو کاپی، پاسپورٹ فوٹوز اور لیمینیشن۔</p>
-                    </div>
-                </div>
-                <div class="local-item">
-                    <div class="local-icon"><i class="fa-solid fa-user-graduate"></i></div>
-                    <div>
-                        <h4 class="urdu">ایجوکیشن اور جاب اپلائی</h4>
-                        <p class="urdu">تمام سرکاری و پرائیویٹ نوکریوں کے لیے پروفیشنل آن لائن اپلائی۔</p>
-                    </div>
+                <div class="detail-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Authority Building</h3>
+                    <p>Backlink strategy and high-quality content that Google trusts.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section id="about">
-        <div class="sec-header">
-            <h2>Track Record</h2>
-        </div>
-        <div class="exp-card" data-aos="fade-left">
-            <div class="exp-info">
-                <h4>SPO Digital Verse</h4>
-                <p>CEO & Founder - Full Business Digitalization</p>
-            </div>
-            <span>2026 - Present</span>
-        </div>
-        <div class="exp-card" data-aos="fade-left" data-aos-delay="100">
-            <div class="exp-info">
-                <h4>Local SEO Domination</h4>
-                <p>Ranking businesses in top 3 spots in Kanganpur</p>
-            </div>
-            <span>Continuous</span>
-        </div>
-        <div class="exp-card" data-aos="fade-left" data-aos-delay="200">
-            <div class="exp-info">
-                <h4>Web Architecture Projects</h4>
-                <p>Custom Portfolios & Single File Massive Codes</p>
-            </div>
-            <span>Ongoing</span>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="footer-top">
-            <div class="footer-logo">
-                <h2 class="logo-box">SPO <span>VERSE</span></h2>
-                <p style="color:var(--text-dim)">Empowering businesses through cutting-edge technology and local trust. Muhammad Asif Ali (Asif IT Expert) is dedicated to your digital success.</p>
-                <div class="social-circle">
-                    <a href="https://www.facebook.com/share/1EqvcWcyu1/"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/smartprinting.online"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@smartprintdigitalpk"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="https://wa.me/923034480404"><i class="fa-brands fa-whatsapp"></i></a>
+    <div id="shop-page" class="page-overlay">
+        <div class="close-page" onclick="togglePage('shop-page')">&times;</div>
+        <div class="page-content">
+            <h2 class="page-title urdu">ایس پی او اسمارٹ سروسز (SPO Shop)</h2>
+            <p class="urdu" style="font-size: 1.5rem; color: var(--primary);">کنگن پور کا سب سے جدید آن لائن سروسز مرکز۔</p>
+            
+            <div class="detail-grid">
+                <div class="detail-card">
+                    <i class="fas fa-id-card"></i>
+                    <h3 class="urdu">سرکاری آن لائن سروسز</h3>
+                    <p class="urdu">نادرا، ایف بی آر ٹیکس ریٹرن، اور تمام سرکاری نوکریوں کے لیے آن لائن اپلائی۔</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-print"></i>
+                    <h3 class="urdu">پرنٹنگ اور ڈیزائن</h3>
+                    <p class="urdu">پروفیشنل لوگو ڈیزائن، فلائیرز، اور ہائی کوالٹی کلر پرنٹنگ۔</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-file-invoice"></i>
+                    <h3 class="urdu">دستاویزات</h3>
+                    <p class="urdu">سی وی بنوانا، لیمینیشن، اسکیننگ، اور پاسپورٹ سائز تصاویر۔</p>
                 </div>
             </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#local">Local Hub</a></li>
-                    <li><a href="https://www.spodigitalverse.online">Main Domain</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Contact Us</h4>
-                <ul>
-                    <li><i class="fa-solid fa-envelope"></i> asif.aimarketing@gmail.com</li>
-                    <li><i class="fa-solid fa-phone"></i> +92 303 4480404</li>
-                    <li><i class="fa-solid fa-location-dot"></i> Purana Paka Bazar, Kanganpur</li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Official Portals</h4>
-                <ul>
-                    <li><a href="https://www.smartprintingonline.site">Printing Site</a></li>
-                    <li><a href="https://wa.me/923034480404">Direct WhatsApp</a></li>
-                </ul>
+            
+            <div style="margin-top: 50px; text-align: center;">
+                <p>📍 Purana Paka Bazar, Kanganpur | 📞 03034480404</p>
             </div>
         </div>
-        <div style="text-align: center; border-top: 1px solid var(--border); padding-top: 40px; color: var(--text-dim); font-size: 0.9rem;">
-            &copy; 2026 SPO SMART DIGITAL VERSE. All rights reserved. Designed by Asif IT Expert.
-        </div>
-    </footer>
+    </div>
 
-    <a href="https://wa.me/923034480404" class="wa-float" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    <div id="contact-page" class="page-overlay">
+        <div class="close-page" onclick="togglePage('contact-page')">&times;</div>
+        <div class="page-content" style="text-align: center;">
+            <h2 class="page-title">Direct Communication Hub</h2>
+            <p>Ready to build your next project? Choose your preferred method.</p>
+            
+            <div class="detail-grid">
+                <div class="detail-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>0303-4480404</p>
+                    <a href="https://wa.me/923034480404" class="wa-link">Chat Now</a>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>asif.aimarketing@gmail.com</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fab fa-facebook"></i>
+                    <h3>Social Media</h3>
+                    <p>SPO Digital Verse</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats-footer">
+        <div><i class="fas fa-circle" style="color: #25d366; font-size: 8px;"></i> LIVE PORTFOLIO</div>
+        <div>CEO: Muhammad Asif Ali</div>
+        <div>Location: Kanganpur, PK</div>
+    </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
-        
-        // Dynamic Scroll Effect for Navbar
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.padding = '15px 5%';
-                nav.style.background = 'rgba(2, 6, 23, 0.95)';
+        AOS.init();
+
+        function togglePage(pageId) {
+            const page = document.getElementById(pageId);
+            const allPages = document.querySelectorAll('.page-overlay');
+            
+            // If the page is already active, close it
+            if (page.classList.contains('active')) {
+                page.classList.remove('active');
+                document.body.style.overflow = 'auto'; // Enable scroll
             } else {
-                nav.style.padding = '25px 5%';
-                nav.style.background = 'rgba(2, 6, 23, 0.8)';
+                // Close any other open pages first
+                allPages.forEach(p => p.classList.remove('active'));
+                // Open requested page
+                page.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Stop main scroll
             }
-        });
+        }
     </script>
+
 </body>
 </html>
