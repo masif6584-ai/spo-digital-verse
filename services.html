@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | SPO Smart Digital Verse</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&family=Noto+Sans+Urdu:wght@400;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #00f2ff;
+            --secondary: #7000ff;
+            --bg-base: #020617;
+            --bg-card: rgba(15, 23, 42, 0.6);
+            --border: rgba(255, 255, 255, 0.08);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --glass: blur(15px);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-base); color: var(--text-main); overflow-x: hidden; }
+        .urdu { font-family: 'Noto Sans Urdu', sans-serif; direction: rtl; }
+        
+        /* Navigation */
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 25px 6%;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(2, 6, 23, 0.85); backdrop-filter: var(--glass);
+            border-bottom: 1px solid var(--border); z-index: 2000;
+        }
+        .nav-logo { font-size: 1.8rem; font-weight: 800; color: var(--primary); text-decoration: none; font-family: 'Space Grotesk', sans-serif; }
+
+        /* Services Hero */
+        .services-hero {
+            padding: 180px 10% 80px; text-align: center;
+            background: linear-gradient(to bottom, rgba(0, 242, 255, 0.05), transparent);
+        }
+        .services-hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-family: 'Space Grotesk', sans-serif; margin-bottom: 15px; }
+        .services-hero span { background: linear-gradient(to right, #00f2ff, #7000ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        /* Master Services Grid */
+        .services-container { padding: 60px 10%; }
+        .service-category { margin-bottom: 100px; }
+        .cat-title { display: flex; align-items: center; gap: 20px; margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
+        .cat-title i { font-size: 2.5rem; color: var(--primary); }
+        .cat-title h2 { font-size: 2.2rem; }
+
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        
+        .s-card {
+            background: var(--bg-card); border: 1px solid var(--border); padding: 40px; border-radius: 30px;
+            transition: 0.5s; position: relative; overflow: hidden;
+        }
+        .s-card:hover { border-color: var(--primary); transform: scale(1.03); box-shadow: 0 10px 30px rgba(0, 242, 255, 0.1); }
+        .s-card h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--primary); }
+        .s-card ul { list-style: none; color: var(--text-dim); }
+        .s-card li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+        .s-card li i { color: var(--secondary); font-size: 0.9rem; }
+
+        /* Footer */
+        footer { padding: 80px 8% 30px; background: #000; border-top: 2px solid var(--primary); margin-top: 50px; }
+        .f-grid { display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 50px; }
+        .wa-btn { width: 45px; height: 45px; background: #25d366; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #fff; text-decoration: none; margin-right: 10px; }
+
+        @media (max-width: 768px) { .f-grid { grid-template-columns: 1fr; } .grid-3 { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">SPO <span>VERSE</span></a>
+        <ul style="display: flex; list-style: none; gap: 25px;">
+            <li><a href="index.html" style="color: #fff; text-decoration: none;">HOME</a></li>
+            <li><a href="services.html" style="color: var(--primary); text-decoration: none; font-weight: 700;">SERVICES</a></li>
+            <li><a href="portfolio.html" style="color: #fff; text-decoration: none;">SHOWCASE</a></li>
+            <li><a href="contact.html" style="color: #fff; text-decoration: none;">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <header class="services-hero">
+        <h1 class="urdu" data-aos="fade-down">ون ونڈو سلوشنز — <span>آپ کی ہر ضرورت کا حل</span></h1>
+        <p data-aos="fade-up">Professional Government, Digital & Printing Services at your doorstep.</p>
+    </header>
+
+    <main class="services-container">
+        
+        <div class="service-category" data-aos="fade-right">
+            <div class="cat-title">
+                <i class="fas fa-print"></i>
+                <h2 class="urdu">پرنٹنگ اور ڈاکومنٹ سروسز</h2>
+            </div>
+            <div class="grid-3">
+                <div class="s-card">
+                    <h3 class="urdu">پرنٹنگ و فوٹو کاپی</h3>
+                    <ul class="urdu">
+                        <li><i class="fas fa-check"></i> کلر اور بلیک اینڈ وائٹ پرنٹنگ</li>
+                        <li><i class="fas fa-check"></i> تیز اور بہترین کوالٹی فوٹو کاپی</li>
+                        <li><i class="fas fa-check"></i> پاسپورٹ سائز تصاویر (فوری)</li>
+                    </ul>
+                </div>
+                <div class="s-card">
+                    <h3 class="urdu">فنشنگ سروسز</h3>
+                    <ul class="urdu">
+                        <li><i class="fas fa-check"></i> ڈاکومنٹ اسکیننگ (High Res)</li>
+                        <li><i class="fas fa-check"></i> بائنڈنگ اور لیمینیشن</li>
+                        <li><i class="fas fa-check"></i> سی وی / ریزیومے میکنگ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-category" data-aos="fade-left">
+            <div class="cat-title">
+                <i class="fas fa-globe"></i>
+                <h2 class="urdu">آن لائن اور گورنمنٹ سروسز</h2>
+            </div>
+            <div class="grid-3">
+                <div class="s-card">
+                    <h3 class="urdu">نادرا و نوکریاں</h3>
+                    <ul class="urdu">
+                        <li><i class="fas fa-check"></i> آن لائن جاب اپلائی (گورنمنٹ و پرائیویٹ)</li>
+                        <li><i class="fas fa-check"></i> نادرا سروسز مکمل رہنمائی</li>
+                        <li><i class="fas fa-check"></i> ڈومیسائل و دیگر سرٹیفیکیٹس</li>
+                    </ul>
+                </div>
+                <div class="s-card">
+                    <h3 class="urdu">ایف بی آر و ٹیکس</h3>
+                    <ul class="urdu">
+                        <li><i class="fas fa-check"></i> NTN رجسٹریشن (بزنس و انفرادی)</li>
+                        <li><i class="fas fa-check"></i> انکم ٹیکس ریٹرن فائلنگ</li>
+                        <li><i class="fas fa-check"></i> IRIS پورٹل مکمل مدد</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-category" data-aos="fade-up">
+            <div class="cat-title">
+                <i class="fas fa-laptop-code"></i>
+                <h2 class="urdu">پروفیشنل ڈیجیٹل سروسز</h2>
+            </div>
+            <div class="grid-3">
+                <div class="s-card">
+                    <h3 class="urdu">ویب و مارکیٹنگ</h3>
+                    <ul class="urdu">
+                        <li><i class="fas fa-check"></i> بزنس و پرسنل ویب سائٹ ڈویلپمنٹ</li>
+                        <li><i class="fas fa-check"></i> فیس بک ایڈز اور سوشل میڈیا پروموشن</li>
+                        <li><i class="fas fa-check"></i> SEO (سرچ انجن آپٹیمائزیشن)</li>
+                    </ul>
+                </div>
+                <div class="s-card">
+                    <h3 class="urdu">بزنس سلوشنز</h3>
+                    <ul class="urdu">
+                        <li><i class="fas fa-check"></i> آن لائن بزنس رجسٹریشن</li>
+                        <li><i class="fas fa-check"></i> ای کامرس اسٹور سیٹ اپ</li>
+                        <li><i class="fas fa-check"></i> ڈیجیٹل برانڈنگ سلوشنز</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="f-grid">
+            <div>
+                <h2 style="color: var(--primary);">SPO SMART SERVICES</h2>
+                <p class="urdu" style="color: var(--text-dim); margin-top: 15px;">آپ کی تمام پرنٹنگ، اسٹیشنری اور آن لائن سروسز کا قابلِ اعتماد مرکز۔</p>
+                <div style="margin-top: 25px;">
+                    <a href="https://wa.me/923034480404" class="wa-btn"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/share/1EqvcWcyu1/" class="wa-btn" style="background: #1877f2;"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/smartprinting.online?igsh=MXVjdXMwc2t5bDUzdQ==" class="wa-btn" style="background: #e4405f;"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@smartprintdigitalpk" class="wa-btn" style="background: #000; border: 1px solid #fff;"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px;">Location</h4>
+                <p class="urdu" style="color: var(--text-dim);">پرانا پکا بازار، کنگن پور، ضلع قصور</p>
+                <p style="color: var(--text-dim); margin-top: 10px;">0303-4480404</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px;">Websites</h4>
+                <p style="font-size: 0.9rem;"><a href="https://www.SmartPrintingOnline.site" style="color: var(--primary); text-decoration: none;">www.SmartPrintingOnline.site</a></p>
+                <p style="font-size: 0.9rem; margin-top: 10px;"><a href="http://spodigitalverse.online" style="color: var(--primary); text-decoration: none;">www.spodigitalverse.online</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>
