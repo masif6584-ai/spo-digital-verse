@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase | SPO Smart Digital Verse</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #00f2ff;
+            --secondary: #7000ff;
+            --bg-base: #020617;
+            --bg-card: rgba(15, 23, 42, 0.6);
+            --border: rgba(255, 255, 255, 0.08);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --glass: blur(15px);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg-base); color: var(--text-main); overflow-x: hidden; }
+
+        /* Navigation */
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 25px 6%;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(2, 6, 23, 0.85); backdrop-filter: var(--glass);
+            border-bottom: 1px solid var(--border); z-index: 2000;
+        }
+        .nav-logo { font-size: 1.8rem; font-weight: 800; color: var(--primary); text-decoration: none; font-family: 'Space Grotesk', sans-serif; }
+        .nav-menu { display: flex; list-style: none; gap: 25px; }
+        .nav-menu a { color: #fff; text-decoration: none; font-weight: 600; font-size: 0.85rem; }
+
+        /* Portfolio Header */
+        .portfolio-header { padding: 180px 10% 60px; text-align: center; }
+        .portfolio-header h1 { font-size: 4rem; font-family: 'Space Grotesk', sans-serif; margin-bottom: 20px; }
+        .portfolio-header span { color: var(--primary); }
+
+        /* Filter Tabs */
+        .filter-wrap { display: flex; justify-content: center; gap: 15px; margin-bottom: 60px; flex-wrap: wrap; }
+        .filter-btn { padding: 12px 30px; border-radius: 50px; border: 1px solid var(--border); background: var(--bg-card); color: #fff; cursor: pointer; transition: 0.3s; }
+        .filter-btn.active, .filter-btn:hover { background: var(--primary); color: #000; font-weight: 700; }
+
+        /* Showcase Grid */
+        .showcase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; padding: 0 10% 100px; }
+        
+        .work-item { 
+            position: relative; border-radius: 25px; overflow: hidden; height: 450px; 
+            border: 1px solid var(--border); transform-style: preserve-3d;
+        }
+        .work-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s transform; }
+        .work-item:hover img { transform: scale(1.1); }
+
+        .work-overlay {
+            position: absolute; inset: 0; background: linear-gradient(transparent, rgba(2, 6, 23, 0.9));
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 40px;
+            opacity: 0; transition: 0.4s; backdrop-filter: blur(2px);
+        }
+        .work-item:hover .work-overlay { opacity: 1; }
+        .work-overlay h3 { font-size: 1.8rem; margin-bottom: 10px; color: var(--primary); }
+        .work-overlay p { color: var(--text-dim); margin-bottom: 20px; }
+        .work-link { color: #fff; text-decoration: none; font-weight: 800; display: flex; align-items: center; gap: 10px; }
+
+        /* Footer */
+        footer { padding: 80px 8% 30px; background: #000; border-top: 2px solid var(--primary); }
+
+        @media (max-width: 768px) { .nav-menu { display: none; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">SPO <span>VERSE</span></a>
+        <ul class="nav-menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="business.html">BUSINESS</a></li>
+            <li><a href="professional.html">PROFESSIONAL</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="portfolio.html" style="color: var(--primary);">SHOWCASE</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <header class="portfolio-header">
+        <h1 data-aos="zoom-in">Our Digital <span>Artifacts</span></h1>
+        <p>A collection of high-end projects delivered across the SPO ecosystem.</p>
+    </header>
+
+    <div class="filter-wrap" data-aos="fade-up">
+        <button class="filter-btn active">ALL PROJECTS</button>
+        <button class="filter-btn">WEB DEV</button>
+        <button class="filter-btn">BRANDING</button>
+        <button class="filter-btn">SEO RESULTS</button>
+    </div>
+
+    <main class="showcase-grid">
+        <div class="work-item" data-aos="fade-up" data-tilt>
+            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=2000" alt="Web Dev">
+            <div class="work-overlay">
+                <h3>SPO Digital Verse SPA</h3>
+                <p>High-end Single Page Application with Glassmorphism 3.0 Logic.</p>
+                <a href="#" class="work-link">VIEW CASE STUDY <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="work-item" data-aos="fade-up" data-aos-delay="100" data-tilt>
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=2000" alt="Branding">
+            <div class="work-overlay">
+                <h3>Neon Identity Design</h3>
+                <p>Corporate logo and visual language for modern IT agencies.</p>
+                <a href="#" class="work-link">VIEW DESIGN <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="work-item" data-aos="fade-up" data-aos-delay="200" data-tilt>
+            <img src="https://images.unsplash.com/photo-1586880244406-556ebe35f28e?auto=format&fit=crop&q=80&w=2000" alt="SEO">
+            <div class="work-overlay">
+                <h3>Local SEO Dominance</h3>
+                <p>Ranked #1 for local printing services in Kanganpur district.</p>
+                <a href="#" class="work-link">CHECK RANKING <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div style="text-align: center;">
+            <h2 style="color: var(--primary); margin-bottom: 20px;">READY TO START YOUR PROJECT?</h2>
+            <a href="https://wa.me/923034480404" style="background: var(--primary); color: #000; padding: 15px 40px; border-radius: 12px; text-decoration: none; font-weight: 800; display: inline-block;">HIRE THE CEO</a>
+        </div>
+        <div style="border-top: 1px solid var(--border); margin-top: 50px; padding-top: 30px; text-align: center; color: var(--text-dim);">
+            &copy; 2026 SPO SMART DIGITAL VERSE | DEVELOPED BY MUHAMMAD ASIF ALI.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        // Initialize 3D Tilt
+        VanillaTilt.init(document.querySelectorAll(".work-item"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
+        });
+    </script>
+</body>
+</html>
