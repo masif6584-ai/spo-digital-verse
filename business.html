@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Infrastructure | SPO Smart Digital Verse</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #00f2ff;
+            --secondary: #7000ff;
+            --accent: #ff007a;
+            --bg-base: #020617;
+            --bg-card: rgba(15, 23, 42, 0.6);
+            --border: rgba(255, 255, 255, 0.08);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --glass: blur(15px);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        body { background-color: var(--bg-base); color: var(--text-main); overflow-x: hidden; line-height: 1.8; }
+        
+        /* Navigation (Same as Home) */
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 25px 6%;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(2, 6, 23, 0.85); backdrop-filter: var(--glass);
+            border-bottom: 1px solid var(--border); z-index: 2000;
+        }
+        .nav-logo { font-size: 1.8rem; font-weight: 800; color: var(--primary); letter-spacing: 3px; text-decoration: none; font-family: 'Space Grotesk', sans-serif; }
+        .nav-logo span { color: #fff; }
+        .nav-menu { display: flex; list-style: none; gap: 25px; }
+        .nav-menu a { color: var(--text-main); text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: 0.4s; letter-spacing: 1px; }
+        .nav-menu a:hover { color: var(--primary); }
+
+        /* Sub-Page Hero */
+        .sub-hero {
+            height: 60vh; display: flex; flex-direction: column; justify-content: center;
+            align-items: center; text-align: center; padding: 0 8%;
+            background: linear-gradient(rgba(2,6,23,0.8), rgba(2,6,23,0.8)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426');
+            background-size: cover; background-position: center; border-bottom: 1px solid var(--border);
+        }
+        .sub-hero h1 { font-size: clamp(2.5rem, 8vw, 5rem); font-family: 'Space Grotesk', sans-serif; margin-bottom: 20px; }
+        .sub-hero h1 span { color: var(--primary); }
+
+        /* Strategy Section */
+        section { padding: 100px 10%; }
+        .strategy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .s-card { background: var(--bg-card); padding: 40px; border-radius: 30px; border: 1px solid var(--border); transition: 0.4s; }
+        .s-card:hover { border-color: var(--primary); transform: translateY(-10px); }
+        .s-card i { font-size: 3rem; color: var(--primary); margin-bottom: 25px; }
+        .s-card h3 { margin-bottom: 15px; font-size: 1.8rem; }
+        .s-card p { color: var(--text-dim); }
+
+        /* Footer (Updated with your links) */
+        footer { padding: 80px 8% 30px; background: #000; border-top: 2px solid var(--primary); margin-top: 100px; }
+        .f-grid { display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 50px; }
+        .wa-mega { width: 50px; height: 50px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #fff; text-decoration: none; transition: 0.3s; }
+        
+        @media (max-width: 768px) { .f-grid { grid-template-columns: 1fr; } .nav-menu { display: none; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">SPO <span>VERSE</span></a>
+        <ul class="nav-menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="business.html" style="color: var(--primary);">BUSINESS</a></li>
+            <li><a href="professional.html">PROFESSIONAL</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="portfolio.html">SHOWCASE</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div class="sub-hero">
+        <h1 data-aos="zoom-out">Strategic <span>Business</span> Growth</h1>
+        <p data-aos="fade-up">Architecting high-performance digital assets for modern enterprises.</p>
+    </div>
+
+    <section>
+        <div class="strategy-grid">
+            <div class="s-card" data-aos="fade-up">
+                <i class="fas fa-rocket"></i>
+                <h3>SEO Domination</h3>
+                <p>Kanganpur aur gird-o-nawah mein apne business ko top ranking par layein. Humari SEO strategies real-time data par mabni hain.</p>
+            </div>
+            <div class="s-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-code"></i>
+                <h3>Enterprise Web</h3>
+                <p>Modern Single Page Applications (SPA) jo aapke brand ki digital presence ko international standards ke mutabiq banati hain.</p>
+            </div>
+            <div class="s-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-chart-line"></i>
+                <h3>ROI Analysis</h3>
+                <p>Digital marketing sirf clicks nahi, conversion ka naam hai. Hum aapke har rupaye ka behtareen return yateeni banate hain.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="f-grid">
+            <div>
+                <h2 style="color: var(--primary); margin-bottom: 20px;">SPO DIGITAL VERSE</h2>
+                <p style="color: var(--text-dim);">Muhammad Asif Ali (Asif IT Expert) - Bridging local business with global technology.</p>
+                <div style="display: flex; gap: 10px; margin-top: 20px;">
+                    <a href="https://wa.me/923034480404" class="wa-mega"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/share/1EqvcWcyu1/" class="wa-mega" style="background: #1877f2;"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/smartprinting.online?igsh=MXVjdXMwc2t5bDUzdQ==" class="wa-mega" style="background: #e4405f;"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@smartprintdigitalpk" class="wa-mega" style="background: #000; border: 1px solid #fff;"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px;">Quick Links</h4>
+                <ul style="list-style: none; color: var(--text-dim);">
+                    <li><a href="services.html" style="color: var(--text-dim); text-decoration: none;">Services</a></li>
+                    <li><a href="portfolio.html" style="color: var(--text-dim); text-decoration: none;">Portfolio</a></li>
+                    <li><a href="contact.html" style="color: var(--text-dim); text-decoration: none;">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px;">Official Address</h4>
+                <p style="color: var(--text-dim);"><i class="fas fa-location-dot"></i> Purana Paka Bazar, Kanganpur, Kasur.</p>
+                <p style="color: var(--text-dim); margin-top: 10px;"><i class="fas fa-envelope"></i> asif.aimarketing@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>
