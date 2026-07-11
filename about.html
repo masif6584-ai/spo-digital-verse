@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | SPO Digital Verse</title>
+<meta name="description" content="Learn about SPO Digital Verse and founder Muhammad Asif Ali — building AI automation, ERP/POS, and web systems for businesses worldwide.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#05070d">
+<link rel="canonical" href="https://www.spodigitalverse.online/about.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' fill='%2322d3ee'%3E◆%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+:root{--bg:#05070d;--surface:#0b0f1a;--surface-2:#0f1524;--border:rgba(255,255,255,0.08);--primary:#22d3ee;--secondary:#8b5cf6;--text:#eef1f8;--dim:#8b95ab}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Plus Jakarta Sans',sans-serif;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.7}
+:focus-visible{outline:2px solid var(--primary);outline-offset:3px}
+nav{position:fixed;top:0;width:100%;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;background:rgba(5,7,13,0.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);z-index:2000}
+.nav-logo{font-size:1.4rem;font-weight:700;color:var(--text);text-decoration:none;font-family:'Space Grotesk',sans-serif;display:flex;align-items:center;gap:9px}
+.nav-logo i{color:var(--primary)}
+.nav-menu{display:flex;list-style:none;gap:30px;align-items:center}
+.nav-menu a{color:var(--dim);text-decoration:none;font-weight:500;font-size:0.86rem}
+.nav-menu a:hover{color:var(--text)}
+.nav-menu a.active{color:var(--primary)}
+.nav-cta{padding:11px 22px;border-radius:8px;background:var(--text) !important;color:#05070d !important;font-weight:700 !important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;z-index:2100}
+.burger span{width:24px;height:2px;background:var(--text);transition:.3s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.page-hero{padding:150px 6% 70px;text-align:center;background:radial-gradient(circle at 20% 20%,rgba(139,92,246,0.12) 0%,transparent 45%),radial-gradient(circle at 80% 60%,rgba(34,211,238,0.1) 0%,transparent 45%)}
+.eyebrow{color:var(--primary);font-weight:600;letter-spacing:2px;font-size:0.8rem;font-family:'JetBrains Mono',monospace}
+.page-hero h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:700;margin:16px 0 18px;font-family:'Space Grotesk',sans-serif;letter-spacing:-1px}
+.page-hero p{color:var(--dim);max-width:640px;margin:0 auto;font-size:1.08rem}
+section{padding:0 6% 100px}
+.wide{max-width:1100px;margin:0 auto}
+.story{max-width:760px;margin:0 auto}
+.story h2{font-size:1.7rem;font-family:'Space Grotesk',sans-serif;margin-bottom:18px;font-weight:600}
+.story p{color:var(--dim);font-size:1rem;margin-bottom:20px}
+.team-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:44px;display:flex;gap:32px;align-items:center;max-width:760px;margin:0 auto}
+.team-avatar{width:110px;height:110px;border-radius:18px;background:linear-gradient(135deg,var(--primary),var(--secondary));display:flex;align-items:center;justify-content:center;font-size:2.5rem;font-weight:700;color:#05070d;font-family:'Space Grotesk',sans-serif;flex-shrink:0}
+.team-card h3{font-size:1.5rem;margin-bottom:4px;font-family:'Space Grotesk',sans-serif}
+.team-card .role{color:var(--primary);font-size:0.88rem;margin-bottom:14px;font-family:'JetBrains Mono',monospace}
+.team-card p{color:var(--dim);font-size:0.95rem}
+.team-soc{display:flex;gap:12px;margin-top:16px}
+.team-soc a{color:var(--dim);font-size:1.1rem}
+.team-soc a:hover{color:var(--primary)}
+.values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.val-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;text-align:center}
+.val-card i{font-size:1.7rem;color:var(--primary);margin-bottom:14px}
+.val-card h4{font-size:1rem;margin-bottom:8px}
+.val-card p{color:var(--dim);font-size:0.86rem}
+.btn{padding:14px 28px;border-radius:10px;font-weight:700;text-decoration:none;font-size:0.9rem;display:inline-flex;align-items:center;gap:8px}
+.btn-fill{background:var(--text);color:#05070d}
+.btn-fill:hover{background:var(--primary)}
+.cta-band{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:60px;text-align:center}
+.cta-band h2{font-size:1.9rem;font-family:'Space Grotesk',sans-serif;margin-bottom:14px}
+.cta-band p{color:var(--dim);margin-bottom:28px}
+footer{padding:80px 6% 40px;background:#000;border-top:1px solid var(--border)}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:60px;max-width:1400px;margin:0 auto}
+.f-about h2{font-size:1.5rem;margin-bottom:16px;font-family:'Space Grotesk',sans-serif}
+.f-about p{color:var(--dim);font-size:0.9rem}
+.f-col h5{font-size:0.95rem;margin-bottom:20px;color:var(--dim);font-weight:600}
+.f-links{list-style:none}
+.f-links li{margin-bottom:12px}
+.f-links a{color:var(--dim);text-decoration:none;font-size:0.9rem}
+.f-links a:hover{color:var(--text)}
+.f-bottom{text-align:center;margin-top:50px;border-top:1px solid var(--border);padding-top:30px;color:var(--dim);font-size:0.8rem;max-width:1400px;margin-left:auto;margin-right:auto}
+.f-bottom a{color:var(--dim);text-decoration:none;margin:0 10px}
+.soc{display:flex;gap:12px;margin-top:20px}
+.soc a{width:40px;height:40px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.05rem;color:#fff;text-decoration:none}
+.soc .wa{background:#25d366}.soc .fb{background:#1877f2}.soc .ig{background:linear-gradient(135deg,#f56040,#c13584,#833ab4)}.soc .tt{background:#000;border:1px solid #ff0050;color:#ff0050}
+.wa-fab{position:fixed;bottom:28px;right:28px;width:56px;height:56px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:#fff;z-index:3000;text-decoration:none}
+@media(max-width:900px){.f-grid{grid-template-columns:1fr 1fr}.team-card{flex-direction:column;text-align:center}}
+@media(max-width:768px){
+.nav-menu{position:fixed;top:0;right:-100%;width:78%;max-width:300px;height:100vh;background:#050810;flex-direction:column;justify-content:center;align-items:flex-start;padding:40px;gap:28px;transition:.4s;border-left:1px solid var(--border)}
+.nav-menu.open{right:0}.burger{display:flex}
+.f-grid{grid-template-columns:1fr;gap:40px}
+.page-hero{padding:130px 6% 50px}
+section{padding:0 6% 60px}
+}
+</style>
+</head>
+<body>
+<nav>
+<a href="index.html" class="nav-logo"><i class="fas fa-diamond"></i>SPO Digital Verse</a>
+<ul class="nav-menu" id="navMenu">
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="about.html" class="active">About</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+</ul>
+<button class="burger" id="burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+<span class="eyebrow">ABOUT US</span>
+<h1>Building digital infrastructure for growing businesses</h1>
+<p>SPO Digital Verse started as a single automation experiment and grew into a full-stack digital agency.</p>
+</div>
+
+<section>
+<div class="story" data-aos="fade-up">
+<h2>Our Story</h2>
+<p>SPO Digital Verse began with a simple problem: local businesses were spending hours every day on manual billing, ledgers, and customer replies that software could easily handle. What started as a single AI-powered automation tool grew into a full suite of ERP/POS platforms, automation systems, and websites — now used to help businesses run more efficiently across Pakistan and internationally.</p>
+<p>Every system we build follows the same principle: it should work reliably even without a stable internet connection, it should speak your customers' language, and it should be built for the way your business actually operates — not a generic template.</p>
+</div>
+</section>
+
+<section>
+<div class="team-card wide" data-aos="fade-up">
+<div class="team-avatar">AA</div>
+<div>
+<h3>Muhammad Asif Ali</h3>
+<div class="role">FOUNDER & CEO</div>
+<p>Founder of SPO Digital Verse, working hands-on across architecture, development, and deployment of every system delivered — from AI automation to enterprise ERP/POS platforms and websites.</p>
+<div class="team-soc">
+<a href="https://wa.me/923034480404" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<a href="https://www.facebook.com/share/1EqvcWcyu1/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/smartprinting.online?igsh=MXVjdXMwc2t5bDUzdQ==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wide">
+<div class="values-grid" data-aos="fade-up">
+<div class="val-card"><i class="fas fa-signal"></i><h4>Offline-First</h4><p>Systems that keep working even when the internet doesn't.</p></div>
+<div class="val-card"><i class="fas fa-language"></i><h4>Bilingual by Design</h4><p>Urdu and English interfaces built in from day one.</p></div>
+<div class="val-card"><i class="fas fa-layer-group"></i><h4>Full-Stack Delivery</h4><p>Automation, ERP, web and marketing under one roof.</p></div>
+<div class="val-card"><i class="fas fa-handshake"></i><h4>Direct Involvement</h4><p>Founder-level attention on every project, start to finish.</p></div>
+</div>
+</div>
+</section>
+
+<section style="padding-bottom:110px">
+<div class="cta-band wide" data-aos="fade-up">
+<h2>Let's build something for your business</h2>
+<p>Tell us what you're working with — we'll get back to you within 24 hours.</p>
+<a href="contact.html" class="btn btn-fill">Get in Touch <i class="fas fa-arrow-right"></i></a>
+</div>
+</section>
+
+<footer id="contact">
+<div class="f-grid">
+<div class="f-about"><h2>SPO Digital Verse</h2><p>Muhammad Asif Ali leads SPO Digital Verse, an agency building AI automation, ERP/POS platforms, and web systems for businesses across Pakistan and worldwide.</p>
+<div class="soc">
+<a href="https://wa.me/923034480404" class="wa" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<a href="https://www.facebook.com/share/1EqvcWcyu1/" class="fb" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/smartprinting.online?igsh=MXVjdXMwc2t5bDUzdQ==" class="ig" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://www.tiktok.com/@smartprintdigitalpk" class="tt" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+</div>
+</div>
+<div class="f-col"><h5>COMPANY</h5><ul class="f-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+<div class="f-col"><h5>SERVICES</h5><ul class="f-links"><li><a href="services.html#automation">AI Automation</a></li><li><a href="services.html#pos-erp">POS & ERP</a></li><li><a href="services.html#web-development">Web Development</a></li><li><a href="services.html#seo">SEO Services</a></li><li><a href="services.html#marketing">Digital Marketing</a></li></ul></div>
+<div class="f-col"><h5>CONTACT</h5><p style="color:var(--dim);margin-bottom:14px;font-size:0.9rem"><i class="fas fa-phone" style="color:var(--primary)"></i> +92 303 4480404</p><p style="color:var(--dim);margin-bottom:14px;font-size:0.9rem"><i class="fas fa-envelope" style="color:var(--primary)"></i> asif.aimarketing@gmail.com</p></div>
+</div>
+<div class="f-bottom">&copy; 2026 SPO DIGITAL VERSE. ALL RIGHTS RESERVED. — BUILT BY MUHAMMAD ASIF ALI.<div style="margin-top:12px"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="contact.html">Contact</a></div></div>
+</footer>
+
+<a href="https://wa.me/923034480404" class="wa-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({duration:800,once:true});
+const burger=document.getElementById('burger'),navMenu=document.getElementById('navMenu');
+burger.addEventListener('click',()=>{burger.classList.toggle('open');navMenu.classList.toggle('open');});
+document.querySelectorAll('.nav-menu a').forEach(a=>a.addEventListener('click',()=>{burger.classList.remove('open');navMenu.classList.remove('open');}));
+</script>
+</body>
+  </html>
+  
