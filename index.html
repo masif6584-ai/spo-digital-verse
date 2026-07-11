@@ -69,8 +69,7 @@ nav{position:fixed;top:0;width:100%;padding:20px 6%;display:flex;justify-content
 
 /* PRODUCT WINDOW MOCKUP */
 .mockup-wrap{position:relative;perspective:1200px}
-.mockup{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 40px 80px -20px rgba(0,0,0,0.6);transform:rotateY(-6deg) rotateX(2deg);transition:.6s}
-.mockup-wrap:hover .mockup{transform:rotateY(-2deg) rotateX(1deg)}
+.mockup{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 40px 80px -20px rgba(0,0,0,0.6);transform:rotateY(-6deg) rotateX(2deg);transition:transform .15s ease-out;will-change:transform}
 .mockup-bar{background:var(--surface-2);padding:12px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border)}
 .mockup-bar .dots{display:flex;gap:6px}
 .mockup-bar .dots span{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,0.15)}
@@ -659,13 +658,33 @@ counterObs.unobserve(el);
 },{threshold:0.5});
 counters.forEach(c=>counterObs.observe(c));
 
-/* Sticky CTA on scroll */
+/* Mouse-tracking 3D tilt */
 const stickyCta=document.getElementById('stickyCta');
-let lastY=0;
 window.addEventListener('scroll',()=>{
-const y=window.scrollY;
-if(y>900){stickyCta.classList.add('show');}else{stickyCta.classList.remove('show');}
-lastY=y;
+if(window.scrollY>900){stickyCta.classList.add('show');}else{stickyCta.classList.remove('show');}
+});
+
+function apply3DTilt(el,maxTilt){
+el.addEventListener('mousemove',(e)=>{
+const r=el.getBoundingClientRect();
+const x=(e.clientX-r.left)/r.width-0.5;
+const y=(e.clientY-r.top)/r.height-0.5;
+el.style.transform=`rotateY(${x*maxTilt}deg) rotateX(${-y*maxTilt}deg) translateY(-4px)`;
+});
+el.addEventListener('mouseleave',()=>{el.style.transform='';});
+}
+const heroMockup=document.querySelector('.mockup');
+if(heroMockup){
+document.querySelector('.mockup-wrap').addEventListener('mousemove',(e)=>{
+const r=heroMockup.parentElement.getBoundingClientRect();
+const x=(e.clientX-r.left)/r.width-0.5;
+const y=(e.clientY-r.top)/r.height-0.5;
+heroMockup.style.transform=`rotateY(${-6+x*10}deg) rotateX(${2-y*8}deg)`;
+});
+}
+document.querySelectorAll('.s-card, .port-card').forEach(c=>{
+c.style.transformStyle='preserve-3d';
+apply3DTilt(c,6);
 });
 </script>
 </body>
