@@ -1,451 +1,672 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Asif Ali | CEO - SPO Smart Digital Verse</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&family=Noto+Sans+Urdu:wght@400;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPO Digital Verse | AI Automation, ERP/POS & Web Development Agency</title>
+<meta name="description" content="SPO Digital Verse builds AI automation systems, custom ERP/POS platforms, and high-performance websites for businesses worldwide, backed by SEO and growth marketing.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#05070d">
+<link rel="canonical" href="https://www.spodigitalverse.online/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SPO Digital Verse | AI Automation, ERP/POS & Web Development Agency">
+<meta property="og:description" content="Global digital agency delivering AI automation, ERP/POS systems, websites, SEO and growth marketing.">
+<meta property="og:url" content="https://www.spodigitalverse.online">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' fill='%2322d3ee'%3E◆%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"SPO Digital Verse","url":"https://www.spodigitalverse.online","founder":{"@type":"Person","name":"Muhammad Asif Ali"},"areaServed":"Worldwide","telephone":"+92-303-4480404","email":"asif.aimarketing@gmail.com"}
+</script>
+<style>
+:root{
+  --bg:#05070d; --surface:#0b0f1a; --surface-2:#0f1524; --border:rgba(255,255,255,0.08);
+  --primary:#22d3ee; --secondary:#8b5cf6; --accent:#ec4899;
+  --text:#eef1f8; --dim:#8b95ab;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Plus Jakarta Sans',sans-serif;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.7}
+.disp{font-family:'Space Grotesk',sans-serif}
+.mono{font-family:'JetBrains Mono',monospace}
+a{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2px solid var(--primary);outline-offset:3px}
+::-webkit-scrollbar{width:9px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--secondary);border-radius:5px}
 
-    <style>
-        /* --- THE CORE SYSTEM --- */
-        :root {
-            --primary: #00f2ff;
-            --secondary: #7000ff;
-            --accent: #ff007a;
-            --bg-base: #020617;
-            --bg-card: rgba(15, 23, 42, 0.6);
-            --border: rgba(255, 255, 255, 0.08);
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
-            --glass: blur(15px);
-        }
+nav{position:fixed;top:0;width:100%;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;background:rgba(5,7,13,0.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);z-index:2000}
+.nav-logo{font-size:1.4rem;font-weight:700;color:var(--text);letter-spacing:0.5px;text-decoration:none;font-family:'Space Grotesk',sans-serif;display:flex;align-items:center;gap:9px}
+.nav-logo i{color:var(--primary)}
+.nav-menu{display:flex;list-style:none;gap:30px;align-items:center}
+.nav-menu a{color:var(--dim);text-decoration:none;font-weight:500;font-size:0.86rem;transition:.3s}
+.nav-menu a:hover{color:var(--text)}
+.nav-cta{padding:11px 22px;border-radius:8px;background:var(--text) !important;color:#05070d !important;font-weight:700 !important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;z-index:2100}
+.burger span{width:24px;height:2px;background:var(--text);transition:.3s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        body { background-color: var(--bg-base); color: var(--text-main); overflow-x: hidden; line-height: 1.8; }
-        .urdu { font-family: 'Noto Sans Urdu', sans-serif; direction: rtl; line-height: 2.2; }
-        
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 10px; }
-        ::-webkit-scrollbar-track { background: var(--bg-base); }
-        ::-webkit-scrollbar-thumb { background: linear-gradient(var(--secondary), var(--primary)); border-radius: 5px; }
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:150px 6% 80px;position:relative;background:radial-gradient(circle at 15% 20%,rgba(139,92,246,0.12) 0%,transparent 45%),radial-gradient(circle at 85% 60%,rgba(34,211,238,0.1) 0%,transparent 45%)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%;max-width:1400px;margin:0 auto}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:0.78rem;color:var(--primary);letter-spacing:2px;margin-bottom:26px;font-family:'JetBrains Mono',monospace;border:1px solid rgba(34,211,238,0.25);padding:7px 14px;border-radius:30px}
+.hero-eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--primary);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-size:clamp(2.4rem,4.6vw,4.2rem);font-weight:700;line-height:1.05;margin-bottom:26px;font-family:'Space Grotesk',sans-serif;letter-spacing:-1.5px}
+.hero h1 .grad{background:linear-gradient(100deg,#22d3ee,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{max-width:520px;color:var(--dim);font-size:1.12rem;margin-bottom:38px;font-weight:300}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+.btn{padding:16px 32px;border-radius:10px;font-weight:700;text-decoration:none;transition:.35s;font-size:0.92rem;display:inline-flex;align-items:center;gap:8px}
+.btn-fill{background:var(--text);color:#05070d}
+.btn-fill:hover{background:var(--primary);transform:translateY(-3px)}
+.btn-outline{border:1px solid var(--border);color:var(--text)}
+.btn-outline:hover{border-color:var(--primary);color:var(--primary)}
 
-        /* --- NAVIGATION ARCHITECTURE --- */
-        nav {
-            position: fixed; top: 0; width: 100%; padding: 25px 6%;
-            display: flex; justify-content: space-between; align-items: center;
-            background: rgba(2, 6, 23, 0.85); backdrop-filter: var(--glass);
-            border-bottom: 1px solid var(--border); z-index: 2000;
-        }
-        .nav-logo { font-size: 1.8rem; font-weight: 800; color: var(--primary); letter-spacing: 3px; text-decoration: none; font-family: 'Space Grotesk', sans-serif; }
-        .nav-logo span { color: #fff; }
-        .nav-menu { display: flex; list-style: none; gap: 25px; }
-        .nav-menu a { color: var(--text-main); text-decoration: none; font-weight: 600; font-size: 0.85rem; transition: 0.4s; letter-spacing: 1px; }
-        .nav-menu a:hover { color: var(--primary); text-shadow: 0 0 10px var(--primary); }
+/* PRODUCT WINDOW MOCKUP */
+.mockup-wrap{position:relative;perspective:1200px}
+.mockup{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 40px 80px -20px rgba(0,0,0,0.6);transform:rotateY(-6deg) rotateX(2deg);transition:.6s}
+.mockup-wrap:hover .mockup{transform:rotateY(-2deg) rotateX(1deg)}
+.mockup-bar{background:var(--surface-2);padding:12px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border)}
+.mockup-bar .dots{display:flex;gap:6px}
+.mockup-bar .dots span{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,0.15)}
+.mockup-bar .tabs{display:flex;gap:6px;margin-left:16px}
+.mockup-bar .tab{font-size:0.72rem;padding:5px 12px;border-radius:6px;color:var(--dim);font-family:'JetBrains Mono',monospace}
+.mockup-bar .tab.active{background:rgba(34,211,238,0.12);color:var(--primary)}
+.mockup-body{padding:22px;display:grid;grid-template-columns:1.1fr 1fr;gap:18px}
+.mockup-stat{background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:14px}
+.mockup-stat .n{font-size:1.3rem;font-weight:700;font-family:'Space Grotesk',sans-serif;color:var(--text)}
+.mockup-stat .l{font-size:0.68rem;color:var(--dim);margin-top:3px;font-family:'JetBrains Mono',monospace}
+.mockup-chart{grid-column:1/3;background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:16px;display:flex;align-items:flex-end;gap:8px;height:90px}
+.mockup-chart span{flex:1;background:linear-gradient(180deg,var(--primary),var(--secondary));border-radius:4px 4px 0 0;opacity:0.85}
+.mockup-row{grid-column:1/3;display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);font-size:0.78rem}
+.mockup-row .lbl{color:var(--dim)}
+.mockup-row .val{color:var(--text);font-family:'JetBrains Mono',monospace}
+.mockup-chat{grid-column:1/3;background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.bubble{max-width:75%;padding:9px 13px;border-radius:12px;font-size:0.8rem}
+.bubble.in{background:rgba(255,255,255,0.06);color:var(--dim);align-self:flex-start;border-bottom-left-radius:3px}
+.bubble.out{background:rgba(34,211,238,0.14);color:var(--text);align-self:flex-end;border-bottom-right-radius:3px}
+.mockup-float{position:absolute;bottom:-24px;left:-24px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:10px;box-shadow:0 20px 40px rgba(0,0,0,0.5)}
+.mockup-float i{color:#22c55e}
+.mockup-float .t{font-size:0.72rem;color:var(--dim)}
+.mockup-float .v{font-size:0.95rem;font-weight:700;font-family:'Space Grotesk',sans-serif}
 
-        /* --- HERO: THE DIGITAL THRONE --- */
-        .hero {
-            min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
-            align-items: center; text-align: center; padding: 120px 8%;
-            background: 
-                radial-gradient(circle at 10% 20%, rgba(112, 0, 255, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(0, 242, 255, 0.15) 0%, transparent 40%);
-        }
-        .hero-pre { font-size: 1.1rem; color: var(--primary); letter-spacing: 5px; margin-bottom: 20px; font-weight: 700; }
-        .hero h1 { font-size: clamp(3.5rem, 12vw, 8rem); font-weight: 800; line-height: 0.85; margin-bottom: 30px; font-family: 'Space Grotesk', sans-serif; }
-        .hero h1 span { background: linear-gradient(to right, #00f2ff, #7000ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero p { max-width: 900px; color: var(--text-dim); font-size: 1.5rem; margin-bottom: 50px; font-weight: 300; }
-        .hero-actions { display: flex; gap: 25px; }
-        .btn-main { padding: 20px 50px; border-radius: 12px; font-weight: 800; text-decoration: none; transition: 0.5s; position: relative; overflow: hidden; }
-        .btn-fill { background: var(--primary); color: #000; }
-        .btn-outline { border: 1px solid var(--border); color: #fff; background: var(--bg-card); }
-        .btn-main:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0, 242, 255, 0.3); }
+/* MARQUEE */
+.marquee-wrap{border-bottom:1px solid var(--border);padding:34px 0;overflow:hidden;background:var(--surface)}
+.marquee-track{display:flex;gap:70px;width:max-content;animation:scroll 28s linear infinite}
+.marquee-track span{font-family:'JetBrains Mono',monospace;font-size:0.95rem;color:var(--dim);white-space:nowrap;letter-spacing:1px}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-        /* --- CORE CATEGORIES SECTION --- */
-        section { padding: 140px 10%; border-bottom: 1px solid var(--border); position: relative; }
-        .sec-head { margin-bottom: 100px; }
-        .sec-head span { color: var(--primary); font-weight: 800; letter-spacing: 3px; font-size: 0.9rem; }
-        .sec-head h2 { font-size: 4rem; font-weight: 800; margin-top: 10px; }
-        .sec-head p { color: var(--text-dim); font-size: 1.3rem; max-width: 700px; margin-top: 20px; }
+section{padding:120px 6%;border-bottom:1px solid var(--border)}
+.sec-head{margin-bottom:70px;max-width:640px}
+.eyebrow{color:var(--primary);font-weight:600;letter-spacing:2px;font-size:0.78rem;font-family:'JetBrains Mono',monospace}
+.sec-head h2{font-size:clamp(2rem,4vw,2.8rem);font-weight:600;margin-top:14px;font-family:'Space Grotesk',sans-serif;letter-spacing:-1px}
+.sec-head p{color:var(--dim);font-size:1.05rem;margin-top:16px}
+.wide{max-width:1400px;margin:0 auto}
 
-        /* Grid Logic */
-        .master-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+.grid5{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px}
+.s-card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:32px;transition:.4s}
+.s-card:hover{border-color:rgba(34,211,238,0.35);transform:translateY(-6px)}
+.s-preview{height:110px;border-radius:10px;background:var(--surface-2);margin-bottom:22px;padding:14px;overflow:hidden;position:relative}
+.s-card h3{font-size:1.25rem;margin-bottom:10px;font-family:'Space Grotesk',sans-serif;font-weight:600}
+.s-card p{color:var(--dim);font-size:0.9rem;margin-bottom:16px}
+.s-link{color:var(--primary);text-decoration:none;font-weight:600;font-size:0.85rem;display:inline-flex;align-items:center;gap:6px}
+/* mini previews */
+.mp-bars{display:flex;align-items:flex-end;gap:6px;height:100%}
+.mp-bars span{flex:1;background:linear-gradient(180deg,var(--primary),var(--secondary));border-radius:3px 3px 0 0;opacity:.8}
+.mp-chat{display:flex;flex-direction:column;gap:7px}
+.mp-chat div{padding:6px 10px;border-radius:8px;font-size:0.68rem;max-width:70%}
+.mp-chat .a{background:rgba(255,255,255,0.06);color:var(--dim)}
+.mp-chat .b{background:rgba(34,211,238,0.14);align-self:flex-end;color:var(--text)}
+.mp-code{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--dim);line-height:1.7}
+.mp-code .k{color:var(--primary)}
+.mp-rank{display:flex;flex-direction:column;gap:6px;justify-content:center;height:100%}
+.mp-rank .r{display:flex;align-items:center;gap:8px;font-size:0.7rem;color:var(--dim)}
+.mp-rank .bar{height:5px;background:linear-gradient(90deg,var(--secondary),var(--primary));border-radius:3px;flex:1}
+.mp-social{display:flex;gap:8px;height:100%;align-items:center}
+.mp-social .card{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:6px;height:70%;padding:6px;display:flex;flex-direction:column;justify-content:flex-end;gap:4px}
+.mp-social .bar2{height:4px;background:rgba(255,255,255,0.15);border-radius:2px}
 
-        /* --- CATEGORY 1: BUSINESS SOLUTIONS --- */
-        .biz-card {
-            background: var(--bg-card); border: 1px solid var(--border); padding: 60px; border-radius: 40px;
-            transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1); position: relative;
-        }
-        .biz-card:hover { border-color: var(--primary); background: rgba(0, 242, 255, 0.03); transform: scale(1.02); }
-        .biz-card i { font-size: 4rem; margin-bottom: 40px; color: var(--primary); }
-        .biz-card h3 { font-size: 2.2rem; margin-bottom: 25px; }
-        .biz-card ul { list-style: none; }
-        .biz-card li { margin-bottom: 15px; display: flex; gap: 15px; align-items: center; color: var(--text-dim); }
-        .biz-card li i { font-size: 1rem; margin-bottom: 0; }
+.process-row{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step}
+.p-item::before{counter-increment:step;content:counter(step,decimal-leading-zero);font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:var(--secondary);display:block;margin-bottom:16px}
+.p-item h4{font-size:1.1rem;margin-bottom:8px;font-family:'Space Grotesk',sans-serif}
+.p-item p{color:var(--dim);font-size:0.88rem}
 
-        /* --- CATEGORY 2: PROFESSIONAL TECH --- */
-        .tech-box { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: center; }
-        .skill-list { display: flex; flex-direction: column; gap: 35px; }
-        .skill-item h4 { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 1.1rem; }
-        .skill-bar-outer { height: 12px; background: rgba(255,255,255,0.05); border-radius: 50px; overflow: hidden; }
-        .skill-bar-inner { height: 100%; background: linear-gradient(90deg, var(--secondary), var(--primary)); border-radius: 50px; position: relative; }
-        .skill-bar-inner::after { content: ''; position: absolute; top: 0; right: 0; width: 20px; height: 100%; background: #fff; opacity: 0.3; filter: blur(5px); }
+/* PORTFOLIO browser chrome */
+.port-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:30px}
+.port-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:.4s}
+.port-card:hover{border-color:rgba(34,211,238,0.35);transform:translateY(-6px)}
+.p-chrome{background:var(--surface-2);padding:10px 14px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border)}
+.p-chrome .dots{display:flex;gap:5px}
+.p-chrome .dots span{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.15)}
+.p-chrome .url{margin-left:10px;background:var(--bg);border-radius:5px;padding:4px 12px;font-size:0.68rem;color:var(--dim);font-family:'JetBrains Mono',monospace;flex:1}
+.p-preview{padding:20px;height:150px}
+.port-body{padding:24px 26px 28px}
+.p-tag{display:inline-block;font-size:0.68rem;font-family:'JetBrains Mono',monospace;color:var(--primary);border:1px solid rgba(34,211,238,0.3);padding:4px 11px;border-radius:20px;margin-bottom:14px}
+.port-body h3{font-size:1.25rem;margin-bottom:8px;font-family:'Space Grotesk',sans-serif;font-weight:600}
+.port-body p{color:var(--dim);font-size:0.88rem;margin-bottom:16px}
+.p-stack{display:flex;flex-wrap:wrap;gap:7px}
+.p-stack span{font-size:0.68rem;color:var(--dim);background:rgba(255,255,255,0.04);padding:4px 11px;border-radius:20px;border:1px solid var(--border)}
 
-        /* --- CATEGORY 3: LOCAL EMPIRE (SPO SHOP) --- */
-        .shop-ultra {   
-            background: linear-gradient(145deg, #0f172a, #020617); padding: 100px 5%; border-radius: 60px; border: 1px solid var(--border);
-        }
-        .shop-feature { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 50px; }
-        .shop-content h4 { font-size: 1.8rem; margin-bottom: 15px; color: var(--primary); }
-        .shop-content p { color: var(--text-dim); font-size: 1.1rem; }
+.test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px}
+.t-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:32px}
+.t-stars{color:#f5b800;margin-bottom:16px;font-size:0.85rem}
+.t-card p{font-size:0.95rem;margin-bottom:22px;font-weight:300;color:var(--text)}
+.t-person{display:flex;align-items:center;gap:12px}
+.t-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--secondary));display:flex;align-items:center;justify-content:center;font-weight:700;color:#05070d;font-family:'Space Grotesk',sans-serif;font-size:0.95rem;flex-shrink:0}
+.t-name{font-weight:600;font-size:0.9rem}
+.t-role{color:var(--dim);font-size:0.76rem}
 
-        /* --- FAQ & TRUST --- */
-        .faq-wrap { max-width: 1000px; margin: 0 auto; }
-        .accordion { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; margin-bottom: 20px; cursor: pointer; transition: 0.3s; }
-        .accordion-head { padding: 30px; display: flex; justify-content: space-between; font-weight: 700; font-size: 1.2rem; }
-        .accordion-body { padding: 0 30px; max-height: 0; overflow: hidden; transition: 0.5s ease; color: var(--text-dim); }
-        .accordion.open .accordion-body { padding-bottom: 30px; max-height: 500px; }
+.faq-wrap{max-width:800px}
+.acc{background:var(--surface);border:1px solid var(--border);border-radius:14px;margin-bottom:14px;cursor:pointer}
+.acc-head{padding:22px 26px;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:1rem}
+.acc-body{padding:0 26px;max-height:0;overflow:hidden;transition:.35s ease;color:var(--dim);font-size:0.9rem}
+.acc.open .acc-body{padding-bottom:22px;max-height:300px}
 
-        /* --- CONTACT MEGA FOOTER --- */
-        footer { padding: 120px 8% 50px; background: #000; border-top: 2px solid var(--primary); }
-        .f-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 80px; }
-        .f-about h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 30px; }
-        .f-col h5 { font-size: 1.4rem; margin-bottom: 30px; position: relative; }
-        .f-col h5::after { content: ''; position: absolute; bottom: -10px; left: 0; width: 40px; height: 3px; background: var(--primary); }
-        .f-links { list-style: none; }
-        .f-links li { margin-bottom: 18px; }
-        .f-links a { color: var(--text-dim); text-decoration: none; transition: 0.3s; font-size: 1.1rem; }
-        .f-links a:hover { color: var(--primary); padding-left: 10px; }
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.c-form{display:flex;flex-direction:column;gap:16px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.c-form input,.c-form select,.c-form textarea{background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.92rem;width:100%}
+.c-form textarea{resize:vertical;min-height:110px}
+.c-form input:focus,.c-form select:focus,.c-form textarea:focus{border-color:var(--primary);outline:none}
+.c-form label{font-size:0.8rem;color:var(--dim);margin-bottom:6px;display:block}
+.submit-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:6px}
+.b-send{flex:1;min-width:170px;padding:15px;border-radius:10px;font-weight:700;border:none;cursor:pointer;font-size:0.9rem;transition:.3s;color:#fff}
+.b-send.email{background:#ea4335}
+.b-send.wa{background:#25d366}
+.b-send:hover{transform:translateY(-3px)}
+.c-info{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:38px}
+.i-row{display:flex;gap:16px;align-items:flex-start;margin-bottom:26px}
+.i-row i{color:var(--primary);font-size:1.15rem;margin-top:3px}
+.i-row h5{font-size:0.96rem;margin-bottom:3px}
+.i-row p{color:var(--dim);font-size:0.88rem}
+.soc{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
+.soc a{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;color:#fff;text-decoration:none;transition:.3s}
+.soc a:hover{transform:translateY(-4px)}
+.soc .wa{background:#25d366}
+.soc .fb{background:#1877f2}
+.soc .ig{background:linear-gradient(135deg,#f56040,#c13584,#833ab4)}
+.soc .tt{background:#000;border:1px solid #ff0050;color:#ff0050}
 
-        /* Social Buttons in Footer - Theme Matching */
-        .social-buttons {
-            display: flex;
-            gap: 15px;
-            margin-top: 25px;
-            flex-wrap: wrap;
-        }
-        .social-btn {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-            color: #fff;
-            text-decoration: none;
-            transition: all 0.4s ease;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
-        .social-btn:hover {
-            transform: translateY(-5px) scale(1.1);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-        }
-        .social-btn.whatsapp { background: #25d366; }
-        .social-btn.facebook { background: #1877f2; }
-        .social-btn.instagram { background: linear-gradient(135deg, #f56040, #c13584, #833ab4); }
-        .social-btn.tiktok { background: #000; border: 2px solid #ff0050; color: #ff0050; }
+footer{padding:90px 6% 44px;background:#000}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:60px;max-width:1400px;margin:0 auto}
+.f-about h2{font-size:1.6rem;color:var(--text);margin-bottom:18px;font-family:'Space Grotesk',sans-serif}
+.f-about p{color:var(--dim);font-size:0.9rem}
+.f-col h5{font-size:1rem;margin-bottom:22px;color:var(--dim);font-weight:600;letter-spacing:0.5px}
+.f-links{list-style:none}
+.f-links li{margin-bottom:13px}
+.f-links a{color:var(--dim);text-decoration:none;transition:.3s;font-size:0.92rem}
+.f-links a:hover{color:var(--text)}
+.f-bottom{text-align:center;margin-top:60px;border-top:1px solid var(--border);padding-top:34px;color:var(--dim);font-size:0.8rem;max-width:1400px;margin-left:auto;margin-right:auto}
+.f-bottom a{color:var(--dim);text-decoration:none;margin:0 10px}
 
-        /* Floating Elements */
-        .wa-mega {
-            position: fixed; bottom: 40px; right: 40px; width: 85px; height: 85px;
-            background: #25d366; border-radius: 50%; display: flex;
-            align-items: center; justify-content: center; font-size: 3rem; color: #fff;
-            z-index: 3000; box-shadow: 0 15px 40px rgba(37,211,102,0.4);
-            text-decoration: none; animation: float 3s infinite ease-in-out;
-        }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+.wa-fab{position:fixed;bottom:28px;right:28px;width:58px;height:58px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.7rem;color:#fff;z-index:3000;box-shadow:0 12px 30px rgba(37,211,102,0.35);text-decoration:none}
+.wa-fab::after{content:'';position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:ring 2.2s infinite}
+@keyframes ring{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.6);opacity:0}}
 
-        /* --- MOBILE RESPONSIVE --- */
-        @media (max-width: 1200px) {
-            .f-grid { grid-template-columns: 1fr 1fr; }
-            .tech-box { grid-template-columns: 1fr; }
-        }
-        @media (max-width: 768px) {
-            .nav-menu { display: none; }
-            .hero h1 { font-size: 4rem; }
-            .sec-head h2 { font-size: 2.5rem; }
-            .f-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media(max-width:1100px){.hero-grid{grid-template-columns:1fr}.mockup-wrap{max-width:520px;margin:0 auto}.f-grid{grid-template-columns:1fr 1fr}.process-row{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){
+.nav-menu{position:fixed;top:0;right:-100%;width:78%;max-width:300px;height:100vh;background:#050810;flex-direction:column;justify-content:center;align-items:flex-start;padding:40px;gap:28px;transition:.4s;border-left:1px solid var(--border)}
+.nav-menu.open{right:0}
+.burger{display:flex}
+.hero{padding:130px 6% 60px}
+section{padding:80px 6%}
+.f-grid{grid-template-columns:1fr;gap:44px}
+.process-row{grid-template-columns:1fr}
+.f-row{grid-template-columns:1fr}
+.contact-grid{grid-template-columns:1fr}
+.mockup-body{grid-template-columns:1fr}
+.mockup-stat,.mockup-chart,.mockup-row,.mockup-chat{grid-column:1/2}
+}
+
+/* STATS COUNTER */
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:56px;max-width:640px}
+.stat{border-left:1px solid var(--border);padding-left:18px}
+.stat:first-child{border-left:none;padding-left:0}
+.stat .n{font-size:2.1rem;font-weight:700;font-family:'Space Grotesk',sans-serif;color:var(--primary)}
+.stat .l{font-size:0.72rem;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin-top:4px}
+
+/* GLOBAL PRESENCE STRIP */
+.globe-strip{border-bottom:1px solid var(--border);padding:20px 6%;display:flex;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap;background:var(--bg)}
+.globe-strip span{font-size:0.82rem;color:var(--dim);display:flex;align-items:center;gap:8px}
+.globe-strip i{color:var(--primary)}
+
+/* INDUSTRIES */
+.ind-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.ind-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;text-align:center;transition:.3s}
+.ind-card:hover{border-color:rgba(34,211,238,0.35);transform:translateY(-4px)}
+.ind-card i{font-size:1.6rem;color:var(--primary);margin-bottom:12px}
+.ind-card h4{font-size:0.92rem;font-weight:600}
+
+/* WHY CHOOSE US TABLE */
+.compare-wrap{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.compare-row{display:grid;grid-template-columns:2fr 1fr 1fr;padding:18px 26px;border-bottom:1px solid var(--border);align-items:center}
+.compare-row:last-child{border-bottom:none}
+.compare-row.head{background:var(--surface-2);font-weight:700;font-size:0.85rem;color:var(--dim);letter-spacing:0.5px}
+.compare-row div:first-child{font-size:0.92rem}
+.compare-row i.yes{color:#22c55e}
+.compare-row i.no{color:#64748b}
+
+/* CASE STUDY */
+.case-wrap{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:50px;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.case-metrics{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.case-metric{background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:20px}
+.case-metric .n{font-size:1.8rem;font-weight:700;font-family:'Space Grotesk',sans-serif;color:var(--primary)}
+.case-metric .l{font-size:0.75rem;color:var(--dim);margin-top:4px}
+.case-tag{display:inline-block;font-size:0.7rem;font-family:'JetBrains Mono',monospace;color:var(--secondary);border:1px solid rgba(139,92,246,0.35);padding:4px 12px;border-radius:20px;margin-bottom:16px}
+
+/* PRICING */
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px}
+.price-card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:36px;position:relative;transition:.3s}
+.price-card.pop{border-color:var(--primary);background:linear-gradient(180deg,rgba(34,211,238,0.06),transparent)}
+.price-card .badge{position:absolute;top:-13px;right:28px;background:var(--primary);color:#05070d;font-size:0.68rem;font-weight:700;padding:5px 14px;border-radius:20px}
+.price-card h3{font-size:1.2rem;margin-bottom:8px;font-family:'Space Grotesk',sans-serif}
+.price-card .price{font-size:2rem;font-weight:700;font-family:'Space Grotesk',sans-serif;margin:14px 0;color:var(--text)}
+.price-card .price span{font-size:0.85rem;color:var(--dim);font-weight:400}
+.price-card ul{list-style:none;margin:22px 0;display:flex;flex-direction:column;gap:12px}
+.price-card li{font-size:0.86rem;color:var(--dim);display:flex;gap:10px;align-items:flex-start}
+.price-card li i{color:#22c55e;margin-top:3px;font-size:0.78rem}
+
+/* TEAM */
+.team-card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:36px;display:flex;gap:28px;align-items:center;max-width:720px}
+.team-avatar{width:96px;height:96px;border-radius:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));display:flex;align-items:center;justify-content:center;font-size:2.2rem;font-weight:700;color:#05070d;font-family:'Space Grotesk',sans-serif;flex-shrink:0}
+.team-card h3{font-size:1.3rem;margin-bottom:4px;font-family:'Space Grotesk',sans-serif}
+.team-card .role{color:var(--primary);font-size:0.85rem;margin-bottom:12px;font-family:'JetBrains Mono',monospace}
+.team-card p{color:var(--dim);font-size:0.9rem}
+.team-soc{display:flex;gap:10px;margin-top:14px}
+.team-soc a{color:var(--dim);font-size:1rem;transition:.3s}
+.team-soc a:hover{color:var(--primary)}
+
+/* TRUST BADGES */
+.trust-row{display:flex;gap:40px;flex-wrap:wrap;justify-content:center}
+.trust-item{display:flex;align-items:center;gap:12px;color:var(--dim);font-size:0.88rem}
+.trust-item i{color:var(--primary);font-size:1.3rem}
+
+/* BLOG/INSIGHTS */
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px}
+.blog-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:.3s}
+.blog-card:hover{border-color:rgba(34,211,238,0.35);transform:translateY(-4px)}
+.blog-thumb{height:130px;background:linear-gradient(135deg,var(--surface-2),rgba(139,92,246,0.15));display:flex;align-items:center;justify-content:center}
+.blog-thumb i{font-size:1.8rem;color:var(--primary)}
+.blog-body{padding:24px}
+.blog-tag{font-size:0.68rem;color:var(--secondary);font-family:'JetBrains Mono',monospace;letter-spacing:1px}
+.blog-body h4{font-size:1.05rem;margin:10px 0 8px;font-family:'Space Grotesk',sans-serif}
+.blog-body p{color:var(--dim);font-size:0.85rem}
+
+/* NEWSLETTER */
+.news-box{background:linear-gradient(135deg,rgba(34,211,238,0.08),rgba(139,92,246,0.08));border:1px solid var(--border);border-radius:20px;padding:50px;text-align:center;max-width:700px;margin:0 auto}
+.news-box h3{font-size:1.6rem;margin-bottom:12px;font-family:'Space Grotesk',sans-serif}
+.news-box p{color:var(--dim);margin-bottom:26px}
+.news-form{display:flex;gap:12px;max-width:440px;margin:0 auto;flex-wrap:wrap}
+.news-form input{flex:1;min-width:200px;padding:14px 18px;border-radius:10px;border:1px solid var(--border);background:var(--surface-2);color:var(--text)}
+.news-form button{padding:14px 26px;border-radius:10px;background:var(--primary);color:#05070d;font-weight:700;border:none;cursor:pointer}
+
+/* STICKY CTA */
+.sticky-cta{position:fixed;bottom:0;left:0;width:100%;background:var(--surface);border-top:1px solid var(--border);padding:16px 6%;display:flex;justify-content:space-between;align-items:center;z-index:2500;transform:translateY(100%);transition:.4s ease;flex-wrap:wrap;gap:12px}
+.sticky-cta.show{transform:translateY(0)}
+.sticky-cta p{font-size:0.92rem;font-weight:600}
+.sticky-cta p span{color:var(--dim);font-weight:400;font-size:0.85rem;display:block}
+
+@media(max-width:900px){.case-wrap{grid-template-columns:1fr}.compare-row{grid-template-columns:1.5fr 1fr 1fr;padding:14px 16px;font-size:0.85rem}.team-card{flex-direction:column;text-align:center}.stats-row{grid-template-columns:1fr 1fr}}
+
+</style>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="nav-logo">SPO <span>DIGITAL VERSE</span></a>
-        <ul class="nav-menu">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="business.html">BUSINESS</a></li>
-            <li><a href="professional.html">PROFESSIONAL</a></li>
-            <li><a href="services.html">SERVICES</a></li>
-            <li><a href="portfolio.html">SHOWCASE</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contact.html">GET IN TOUCH</a></li>
-        </ul>
-    </nav>
+<nav>
+<a href="index.html" class="nav-logo"><i class="fas fa-diamond"></i>SPO Digital Verse</a>
+<ul class="nav-menu" id="navMenu">
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+</ul>
+<button class="burger" id="burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
 
-    <section class="hero" id="home">
-        <div class="hero-pre" data-aos="fade-down">WELCOME TO THE FUTURE</div>
-        <h1 data-aos="fade-up">Architecting The<br><span>Digital Empire.</span></h1>
-        <p data-aos="fade-up" data-aos-delay="200">Muhammad Asif Ali (Asif IT Expert) presents a unified ecosystem for high-end web development, dominant SEO, and professional government services. From Kanganpur to the World.</p>
-        <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
-            <a href="https://wa.me/923034480404" class="btn-main btn-fill" target="_blank">HIRE THE CEO</a>
-            <a href="https://www.spodigitalverse.online" class="btn-main btn-outline" target="_blank">EXPLORE VERSE</a>
-        </div>
-    </section>
+<section class="hero">
+<div class="hero-grid">
+<div data-aos="fade-up">
+<div class="hero-eyebrow"><span class="dot"></span>GLOBAL DIGITAL AGENCY</div>
+<h1>Software that runs your <span class="grad">whole business.</span></h1>
+<p>SPO Digital Verse builds AI automation, ERP/POS platforms, and high-performance websites — engineered for businesses that plan to scale internationally.</p>
+<div class="hero-actions">
+<a href="contact.html" class="btn btn-fill">Start a Project <i class="fas fa-arrow-right"></i></a>
+<a href="portfolio.html" class="btn btn-outline">View Our Work</a>
+</div>
+<div class="stats-row">
+<div class="stat"><div class="n" data-count="15">0</div><div class="l">Systems Deployed</div></div>
+<div class="stat"><div class="n" data-count="5">0</div><div class="l">Service Domains</div></div>
+<div class="stat"><div class="n" data-count="100">0</div><div class="l">% Custom Built</div></div>
+<div class="stat"><div class="n" data-count="24">0</div><div class="l">Hr Support Access</div></div>
+</div>
+</div>
+<div class="mockup-wrap" data-aos="fade-up" data-aos-delay="150">
+<div class="mockup">
+<div class="mockup-bar">
+<div class="dots"><span></span><span></span><span></span></div>
+<div class="tabs"><div class="tab active">Dashboard</div><div class="tab">Automation</div></div>
+</div>
+<div class="mockup-body">
+<div class="mockup-stat"><div class="n">₨48,200</div><div class="l">TODAY'S SALES</div></div>
+<div class="mockup-stat"><div class="n">312</div><div class="l">ORDERS SYNCED</div></div>
+<div class="mockup-chart"><span style="height:40%"></span><span style="height:65%"></span><span style="height:50%"></span><span style="height:85%"></span><span style="height:60%"></span><span style="height:95%"></span><span style="height:70%"></span></div>
+<div class="mockup-row"><span class="lbl">Ledger — Udhaar Balance</span><span class="val">Rs. 12,450</span></div>
+<div class="mockup-chat">
+<div class="bubble in">Customer: Order status?</div>
+<div class="bubble out">AI Agent: Shipped, arriving tomorrow ✅</div>
+</div>
+</div>
+</div>
+<div class="mockup-float"><i class="fas fa-circle-check"></i><div><div class="t">Sync Status</div><div class="v">Online · Auto-saved</div></div></div>
+</div>
+</div>
+</section>
 
-    <section id="business">
-        <div class="sec-head" data-aos="fade-right">
-            <span>01 // STRATEGIC DOMAINS</span>
-            <h2>Business Infrastructure</h2>
-            <p>Scaling brands through technological superiority and strategic local positioning.</p>
-        </div>
-        <div class="master-grid">
-            <div class="biz-card" data-aos="fade-up">
-                <i class="fas fa-layer-group"></i>
-                <h3>Enterprise Web</h3>
-                <p>We don't just build websites; we architect digital headquarters. Our focus is on high-conversion landing pages and massive SPAs.</p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Glassmorphism 3.0 Design</li>
-                    <li><i class="fas fa-check-circle"></i> 3D Tilt Interaction Logic</li>
-                    <li><i class="fas fa-check-circle"></i> Single-File Scalability</li>
-                    <li><i class="fas fa-check-circle"></i> Custom CMS Frameworks</li>
-                </ul>
-            </div>
-            <div class="biz-card" data-aos="fade-up" data-aos-delay="100">
-                <i class="fas fa-chart-pie"></i>
-                <h3>Search Supremacy</h3>
-                <p>Dominating the first page of Google. Our technical SEO ensures your business is the authority in your geographic region.</p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> G-Search Console Mastery</li>
-                    <li><i class="fas fa-check-circle"></i> Local Map Ranking Expert</li>
-                    <li><i class="fas fa-check-circle"></i> Keyword ROI Analysis</li>
-                    <li><i class="fas fa-check-circle"></i> Backlink Empire Building</li>
-                </ul>
-            </div>
-            <div class="biz-card" data-aos="fade-up" data-aos-delay="200">
-                <i class="fas fa-fingerprint"></i>
-                <h3>Brand Identity</h3>
-                <p>Creating visual languages that resonate. Professional logo design, social media kits, and corporate branding.</p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Neon Glow Logo Concepts</li>
-                    <li><i class="fas fa-check-circle"></i> Social Media Campaigns</li>
-                    <li><i class="fas fa-check-circle"></i> Double-Shade Urdu Fonts</li>
-                    <li><i class="fas fa-check-circle"></i> Corporate Print Collateral</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<div class="marquee-wrap">
+<div class="marquee-track">
+<span>SUPABASE</span><span>FIREBASE</span><span>CLAUDE API</span><span>REACT 18</span><span>TAILWIND CSS</span><span>VITE</span><span>INDEXEDDB</span>
+<span>SUPABASE</span><span>FIREBASE</span><span>CLAUDE API</span><span>REACT 18</span><span>TAILWIND CSS</span><span>VITE</span><span>INDEXEDDB</span>
+</div>
+</div>
 
-    <section id="tech" style="background: rgba(112,0,255,0.02);">
-        <div class="sec-head" data-aos="fade-left">
-            <span>02 // CORE ABILITIES</span>
-            <h2>Technical Proficiency</h2>
-            <p>The science behind the SPO Verse. Advanced stacks and real-time data handling.</p>
-        </div>
-        <div class="tech-box">
-            <div class="skill-list" data-aos="fade-right">
-                <div class="skill-item">
-                    <h4>SPA ARCHITECTURE <span>98%</span></h4>
-                    <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 98%;"></div></div>
-                </div>
-                <div class="skill-item">
-                    <h4>SEARCH ENGINE RANKING <span>95%</span></h4>
-                    <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 95%;"></div></div>
-                </div>
-                <div class="skill-item">
-                    <h4>FIREBASE & REAL-TIME DATA <span>90%</span></h4>
-                    <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 90%;"></div></div>
-                </div>
-                <div class="skill-item">
-                    <h4>UI/UX PSYCHOLOGY <span>92%</span></h4>
-                    <div class="skill-bar-outer"><div class="skill-bar-inner" style="width: 92%;"></div></div>
-                </div>
-            </div>
-            <div class="biz-card" style="border-radius: 60px;" data-aos="fade-left">
-                <h3>The Tech Stack</h3>
-                <p>Humari technology ka intekhab international standards ke mutabiq hai.</p>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;">
-                    <div class="urdu">✅ HTML5 / CSS3 / ES6</div>
-                    <div class="urdu">✅ Firebase Hosting</div>
-                    <div class="urdu">✅ GitHub Enterprise</div>
-                    <div class="urdu">✅ Google Analytics 4</div>
-                    <div class="urdu">✅ AOS Animations</div>
-                    <div class="urdu">✅ Vector Graphics</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="globe-strip">
+<span><i class="fas fa-earth-asia"></i> Pakistan</span>
+<span><i class="fas fa-earth-americas"></i> Remote-first delivery</span>
+<span><i class="fas fa-clock"></i> Cross-timezone support</span>
+<span><i class="fas fa-language"></i> Bilingual: Urdu / English</span>
+</div>
 
-    <section id="shop">
-        <div class="sec-head" data-aos="fade-up">
-            <span class="urdu">03 // مقامی خدمات کا مرکز</span>
-            <h2 class="urdu">ایس پی او اسمارٹ سروسز</h2>
-            <p>Providing essential government and online documentation services with 100% reliability.</p>
-        </div>
-        <div class="shop-ultra" data-aos="zoom-in">
-            <div class="shop-feature">
-                <div class="shop-content">
-                    <i class="fas fa-university" style="font-size: 3rem; color: var(--primary);"></i>
-                    <h4 class="urdu">حکومتی اور نادرا سروسز</h4>
-                    <p class="urdu">نادرا ٹوکن، پاسپورٹ گائیڈنس، ڈومیسائل، اور تمام سرکاری نوکریوں کے لیے آن لائن اپلائی کی سہولت۔</p>
-                </div>
-                <div class="shop-content">
-                    <i class="fas fa-file-shield" style="font-size: 3rem; color: var(--primary);"></i>
-                    <h4 class="urdu">ایف بی آر اور ٹیکس کونسلنگ</h4>
-                    <p class="urdu">بزنس رجسٹریشن، این ٹی این (NTN) بنوانا، اور انکم ٹیکس ریٹرن فائل کرنے کی پروفیشنل سہولت۔</p>
-                </div>
-                <div class="shop-content">
-                    <i class="fas fa-print" style="font-size: 3rem; color: var(--primary);"></i>
-                    <h4 class="urdu">پرنٹنگ اور گرافکس</h4>
-                    <p class="urdu">پروفیشنل کلر پرنٹنگ، لیمینیشن، اسکیننگ، اور بین الاقوامی معیار کی سی وی (Resume) بنوانا۔</p>
-                </div>
-            </div>
-            <div style="margin-top: 60px; text-align: center; border-top: 1px solid var(--border); padding-top: 40px;">
-                <p class="urdu" style="font-size: 1.5rem;">📍 پرانا پکا بازار، کنگن پور، ضلع قصور | 📞 03034480404</p>
-            </div>
-        </div>
-    </section>
+<section id="services">
+<div class="sec-head" data-aos="fade-up"><span class="eyebrow">WHAT WE BUILD</span><h2>Five domains. One connected system.</h2><p>Every service is engineered to move a real business metric — not just deliverables.</p></div>
+<div class="grid5 wide">
+<div class="s-card" data-aos="fade-up">
+<div class="s-preview"><div class="mp-chat"><div class="a">Hi, do you deliver today?</div><div class="b">Yes! Free delivery before 6 PM 🚚</div></div></div>
+<h3>AI Automation</h3><p>WhatsApp bots, lead follow-ups and internal workflows powered by Claude/LLM systems.</p>
+<a href="services.html#automation" class="s-link">Learn More <i class="fas fa-arrow-right"></i></a>
+</div>
+<div class="s-card" data-aos="fade-up" data-aos-delay="80">
+<div class="s-preview"><div class="mp-bars"><span style="height:35%"></span><span style="height:70%"></span><span style="height:50%"></span><span style="height:90%"></span><span style="height:60%"></span></div></div>
+<h3>POS & ERP Systems</h3><p>Multi-branch billing, inventory and ledger management with offline-first reliability.</p>
+<a href="services.html#pos-erp" class="s-link">Learn More <i class="fas fa-arrow-right"></i></a>
+</div>
+<div class="s-card" data-aos="fade-up" data-aos-delay="160">
+<div class="s-preview"><div class="mp-code"><span class="k">const</span> app = init();<br><span class="k">render</span>(&lt;Store/&gt;);<br><span class="k">deploy</span>('production');</div></div>
+<h3>Website Development</h3><p>Fast single-page architectures with modern, accessible UI systems.</p>
+<a href="services.html#web-development" class="s-link">Learn More <i class="fas fa-arrow-right"></i></a>
+</div>
+<div class="s-card" data-aos="fade-up" data-aos-delay="240">
+<div class="s-preview"><div class="mp-rank"><div class="r"><span>#1</span><div class="bar" style="width:90%"></div></div><div class="r"><span>#2</span><div class="bar" style="width:65%"></div></div><div class="r"><span>#3</span><div class="bar" style="width:40%"></div></div></div></div>
+<h3>SEO Services</h3><p>Technical and content SEO that gets you ranking for searches that convert.</p>
+<a href="services.html#seo" class="s-link">Learn More <i class="fas fa-arrow-right"></i></a>
+</div>
+<div class="s-card" data-aos="fade-up" data-aos-delay="320">
+<div class="s-preview"><div class="mp-social"><div class="card"><div class="bar2" style="width:80%"></div><div class="bar2" style="width:50%"></div></div><div class="card"><div class="bar2" style="width:60%"></div><div class="bar2" style="width:90%"></div></div><div class="card"><div class="bar2" style="width:70%"></div><div class="bar2" style="width:40%"></div></div></div></div>
+<h3>Digital Marketing</h3><p>Brand campaigns across social platforms that turn attention into customers.</p>
+<a href="services.html#marketing" class="s-link">Learn More <i class="fas fa-arrow-right"></i></a>
+</div>
+</div>
+</section>
 
-    <!-- SPO Smart Printing & Online Services Section -->
-    <section id="portfolio" style="background: rgba(0, 242, 255, 0.02);">
-        <div class="sec-head" data-aos="fade-up">
-            <span>SPO SMART PRINTING & ONLINE SERVICES</span>
-            <h2 class="urdu">پرنٹنگ، اسٹیشنری اور آن لائن سروسز</h2>
-            <p>SPO Smart Printing & Online Services آپ کی تمام پرنٹنگ، اسٹیشنری اور آن لائن سروسز کا قابلِ اعتماد مرکز ہے۔ ہم معیاری کام اور بہترین کسٹمر سروس فراہم کرنے کے لیے ہمہ وقت کوشاں ہیں۔</p>
-        </div>
+<section style="background:var(--surface)">
+<div class="sec-head" data-aos="fade-up"><span class="eyebrow">INDUSTRIES</span><h2>Built for how your industry actually works</h2><p>Every system is reconfigured around the workflow of your specific business type.</p></div>
+<div class="ind-grid wide">
+<div class="ind-card" data-aos="fade-up"><i class="fas fa-store"></i><h4>Retail & Wholesale</h4></div>
+<div class="ind-card" data-aos="fade-up" data-aos-delay="40"><i class="fas fa-utensils"></i><h4>Restaurants</h4></div>
+<div class="ind-card" data-aos="fade-up" data-aos-delay="80"><i class="fas fa-house"></i><h4>Real Estate</h4></div>
+<div class="ind-card" data-aos="fade-up" data-aos-delay="120"><i class="fas fa-stethoscope"></i><h4>Clinics & Healthcare</h4></div>
+<div class="ind-card" data-aos="fade-up" data-aos-delay="160"><i class="fas fa-scissors"></i><h4>Salons & Services</h4></div>
+<div class="ind-card" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-print"></i><h4>Printing & Agencies</h4></div>
+</div>
+</section>
 
-        <div style="max-width: 900px; margin: 0 auto; text-align: center; padding: 40px; background: var(--bg-card); border-radius: 30px; border: 1px solid var(--border);">
-            <p style="font-size: 1.2rem; color: var(--text-dim); margin-bottom: 40px;">
-                ہماری خدمات اور نئی اپڈیٹس کے لیے نیچے دیے گئے لنکس پر کلک کریں:
-            </p>
+<section>
+<div class="sec-head" data-aos="fade-up"><span class="eyebrow">WHY CHOOSE US</span><h2>One vendor. Full stack. No handoffs.</h2></div>
+<div class="compare-wrap wide" data-aos="fade-up">
+<div class="compare-row head"><div>Capability</div><div style="text-align:center">SPO Digital Verse</div><div style="text-align:center">Traditional Agency</div></div>
+<div class="compare-row"><div>Offline-first system reliability</div><div style="text-align:center"><i class="fas fa-check yes"></i></div><div style="text-align:center"><i class="fas fa-xmark no"></i></div></div>
+<div class="compare-row"><div>Bilingual Urdu/English interfaces</div><div style="text-align:center"><i class="fas fa-check yes"></i></div><div style="text-align:center"><i class="fas fa-xmark no"></i></div></div>
+<div class="compare-row"><div>AI automation + ERP + web under one roof</div><div style="text-align:center"><i class="fas fa-check yes"></i></div><div style="text-align:center"><i class="fas fa-xmark no"></i></div></div>
+<div class="compare-row"><div>Direct founder-level involvement</div><div style="text-align:center"><i class="fas fa-check yes"></i></div><div style="text-align:center"><i class="fas fa-xmark no"></i></div></div>
+<div class="compare-row"><div>Ongoing support & remote licensing control</div><div style="text-align:center"><i class="fas fa-check yes"></i></div><div style="text-align:center"><i class="fas fa-xmark no"></i></div></div>
+</div>
+</section>
 
-            <div class="social-buttons" style="justify-content: center;">
-                <a href="https://www.SmartPrintingOnline.site" class="social-btn" style="background: var(--primary); color: #000; font-size: 1.4rem;" target="_blank" title="ویب سائٹ">
-                    <i class="fas fa-globe"></i>
-                </a>
-                <a href="mailto:asif.aimarketing@gmail.com" class="social-btn" style="background: #ea4335;" target="_blank" title="ای میل">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://www.facebook.com/share/1EqvcWcyu1/" class="social-btn facebook" target="_blank" title="فیس بک">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://whatsapp.com/channel/0029VbCxVz4545ux49Xa1t1E" class="social-btn whatsapp" target="_blank" title="واٹس ایپ چینل">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="https://www.instagram.com/smartprinting.online?igsh=MXVjdXMwc2t5bDUzdQ==" class="social-btn instagram" target="_blank" title="انسٹاگرام">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.tiktok.com/@smartprintdigitalpk" class="social-btn tiktok" target="_blank" title="ٹک ٹاک">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-            </div>
-        </div>
-    </section>
+<section style="background:var(--surface)">
+<div class="sec-head" data-aos="fade-up"><span class="eyebrow">HOW WE WORK</span><h2>A clear path from idea to launch</h2></div>
+<div class="process-row wide">
+<div class="p-item" data-aos="fade-up"><h4>Discovery</h4><p>We map your workflow and requirements before writing any code.</p></div>
+<div class="p-item" data-aos="fade-up" data-aos-delay="80"><h4>Design</h4><p>System architecture planned around how your team actually works.</p></div>
+<div class="p-item" data-aos="fade-up" data-aos-delay="160"><h4>Build</h4><p>Development in focused sprints with visible progress at every stage.</p></div>
+<div class="p-item" data-aos="fade-up" data-aos-delay="240"><h4>Launch & Support</h4><p>We deploy, train your team, and stay on for ongoing upgrades.</p></div>
+</div>
+</section>
 
-    <section id="faq">
-        <div class="sec-head">
-            <h2>Knowledge Base (FAQ)</h2>
-            <p>Everything you need to know about our workflow and services.</p>
-        </div>
-        <div class="faq-wrap">
-            <div class="accordion">
-                <div class="accordion-head">SPO Verse ki websites baqi se behtar kyun hain? <i class="fas fa-plus"></i></div>
-                <div class="accordion-body">Hum SPA (Single Page Application) logic use karte hain jo bina reload hue chalti hai, aur is mein futuristic Glassmorphism design hota hai.</div>
-            </div>
-            <div class="accordion">
-                <div class="accordion-head">Kya SEO waqai business barha sakta hai? <i class="fas fa-plus"></i></div>
-                <div class="accordion-body">Ji bilkul, hum aapke business ko local search mein top par laate hain taake real customers aap tak pahonch sakein.</div>
-            </div>
-            <div class="accordion">
-                <div class="accordion-head">SPO Shop par payments ke kya zariye hain? <i class="fas fa-plus"></i></div>
-                <div class="accordion-body">Hum JazzCash, Easypaisa, aur direct bank transfer accept karte hain for client convenience.</div>
-            </div>
-            <div class="accordion">
-                <div class="accordion-head">Kya aap remote clients ke sath kaam karte hain? <i class="fas fa-plus"></i></div>
-                <div class="accordion-body">Ji haan, SPO Digital Verse poore Pakistan aur international clients ko digital services provide karta hai.</div>
-            </div>
-        </div>
-    </section>
+<section>
+<div class="sec-head" data-aos="fade-up"><span class="eyebrow">SUCCESS STORY</span><h2>From manual ledgers to real-time control</h2></div>
+<div class="case-wrap wide" data-aos="fade-up">
+<div>
+<span class="case-tag">RETAIL · POS MIGRATION</span>
+<h3 class="disp" style="font-size:1.6rem;margin-bottom:14px;font-weight:600">A multi-branch retailer replaced paper ledgers with a live, synced POS system</h3>
+<p style="color:var(--dim);font-size:0.95rem">The client tracked stock and Udhaar (credit) manually across branches, causing daily reconciliation errors. We deployed a synced POS/ERP system with offline fallback so every branch stays accurate — even without internet.</p>
+</div>
+<div class="case-metrics">
+<div class="case-metric"><div class="n">70%</div><div class="l">Faster daily billing</div></div>
+<div class="case-metric"><div class="n">0</div><div class="l">Reconciliation errors</div></div>
+<div class="case-metric"><div class="n">3</div><div class="l">Branches synced live</div></div>
+<div class="case-metric"><div class="n">24/7</div><div class="l">Offline reliability</div></div>
+</div>
+</div>
+</section>
 
-    <footer id="contact">
-        <div class="f-grid">
-            <div class="f-about">
-                <h2>SPO VERSE</h2>
-                <p>Muhammad Asif Ali (Asif IT Expert) is the driving force behind the SPO ecosystem. Our mission is to bridge the gap between local businesses and global technology.</p>
-                
-                <div class="social-buttons">
-                    <a href="https://wa.me/923034480404" class="social-btn whatsapp" target="_blank" title="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="https://www.facebook.com/share/1EqvcWcyu1/" class="social-btn facebook" target="_blank" title="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/smartprinting.online?igsh=MXVjdXMwc2t5bDUzdQ==" class="social-btn instagram" target="_blank" title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@smartprintdigitalpk" class="social-btn tiktok" target="_blank" title="TikTok">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="f-col">
-                <h5>Navigation</h5>
-                <ul class="f-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="business.html">Business</a></li>
-                    <li><a href="professional.html">Tech Stack</a></li>
-                    <li><a href="services.html">SPO Shop</a></li>
-                </ul>
-            </div>
-            <div class="f-col">
-                <h5>Categories</h5>
-                <ul class="f-links">
-                    <li><a href="business.html">Web Development</a></li>
-                    <li><a href="professional.html">SEO Audits</a></li>
-                    <li><a href="services.html">Tax Filing</a></li>
-                    <li><a href="portfolio.html">Graphic Design</a></li>
-                </ul>
-            </div>
-            <div class="f-col">
-                <h5>Official Contact</h5>
-                <p style="color: var(--text-dim); margin-bottom: 20px;"><i class="fas fa-location-dot" style="color: var(--primary);"></i> Purana Paka Bazar, Kanganpur, Kasur.</p>
-                <p style="color: var(--text-dim); margin-bottom: 20px;"><i class="fas fa-phone" style="color: var(--primary);"></i> +92 303 4480404</p>
-                <p style="color: var(--text-dim);"><i class="fas fa-envelope" style="color: var(--primary);"></i> asif.aimarketing@gmail.com</p>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 80px; border-top: 1px solid var(--border); padding-top: 50px; color: var(--text-dim); font-size: 0.9rem;">
-            &copy; 2026 SPO SMART DIGITAL VERSE | DEVELOPED BY MUHAMMAD ASIF ALI. ALL RIGHTS RESERVED.
-        </div>
-    </footer>
+<section id="portfolio">
+<div class="sec-head" data-aos="fade-up"><span class="eyebrow">SELECTED WORK</span><h2>Systems we've shipped</h2><p>Real products built and deployed for active businesses.</p></div>
+<div class="port-grid wide">
+<div class="port-card" data-aos="fade-up">
+<div class="p-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">Internal Build Preview</div></div>
+<div class="p-preview mp-bars" style="display:flex"><span style="height:45%"></span><span style="height:80%"></span><span style="height:60%"></span><span style="height:95%"></span><span style="height:70%"></span><span style="height:55%"></span></div>
+<div class="port-body"><span class="p-tag">ERP / POS</span><h3>SPO Digital Verse Platform</h3><p>Universal multi-business ERP/POS with offline-first sync, ledger management and bilingual UI.</p><div class="p-stack"><span>Supabase</span><span>IndexedDB</span><span>Tailwind</span></div></div>
+</div>
+<div class="port-card" data-aos="fade-up" data-aos-delay="80">
+<div class="p-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">Internal Build Preview</div></div>
+<div class="p-preview" style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><div class="mockup-stat" style="padding:10px"><div class="n" style="font-size:1rem">18</div><div class="l">SECTORS</div></div><div class="mockup-stat" style="padding:10px"><div class="n" style="font-size:1rem">Offline</div><div class="l">READY</div></div></div>
+<div class="port-body"><span class="p-tag">POS SYSTEM</span><h3>Universal Business OS</h3><p>Single-build POS engine pre-configured for 18 sectors with multi-role auth and thermal receipt printing.</p><div class="p-stack"><span>HTML5</span><span>Offline Sync</span></div></div>
+</div>
+<div class="port-card" data-aos="fade-up" data-aos-delay="160">
+<div class="p-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">Internal Build Preview</div></div>
+<div class="p-preview mp-chat" style="display:flex;justify-content:center"><div class="a">New lead captured</div><div class="b">Auto-replied in 2s ⚡</div></div>
+<div class="port-body"><span class="p-tag">AI AUTOMATION</span><h3>Automation Studio Portal</h3><p>Agency-grade automation portal with AI-powered workflows and an 18-page admin dashboard.</p><div class="p-stack"><span>React 18</span><span>Claude API</span></div></div>
+</div>
+<div class="port-card" data-aos="fade-up" data-aos-delay="240">
+<div class="p-chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">Internal Build Preview</div></div>
+<div class="p-preview mp-social" style="display:flex"><div class="card"><div class="bar2" style="width:70%"></div></div><div class="card"><div class="bar2" style="width:50%"></div></div><div class="card"><div class="bar2" style="width:85%"></div></div></div>
+<div class="port-body"><span class="p-tag">MARKETING TOOL</span><h3>Ad Image Generator</h3><p>Standalone tool generating ready-to-post ad creatives in multiple formats for social campaigns.</p><div class="p-stack"><span>Canvas API</span></div></div>
+</div>
+</div>
+<div style="text-align:center;margin-top:54px" data-aos="fade-up"><a href="portfolio.html" class="btn btn-outline">View Full Portfolio</a></div>
+</section>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/923034480404" class="wa-mega" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+<section style="background:var(--surface)">
+<div class="sec-head" data-aos="fade-up"><span class="eyebrow">PRICING</span><h2>Transparent packages, built to scale</h2><p>Every project is scoped individually — these ranges give you a starting point.</p></div>
+<div class="price-grid wide">
+<div class="price-card" data-aos="fade-up">
+<h3>Starter</h3><p style="color:var(--dim);font-size:0.85rem">For single-location businesses</p>
+<div class="price">Custom Quote</div>
+<ul><li><i class="fas fa-check"></i> Single-branch POS or website</li><li><i class="fas fa-check"></i> Basic bilingual UI</li><li><i class="fas fa-check"></i> 1 month support</li></ul>
+<a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center">Get Started</a>
+</div>
+<div class="price-card pop" data-aos="fade-up" data-aos-delay="80">
+<div class="badge">MOST POPULAR</div>
+<h3>Professional</h3><p style="color:var(--dim);font-size:0.85rem">For multi-branch & growing teams</p>
+<div class="price">Custom Quote</div>
+<ul><li><i class="fas fa-check"></i> Multi-branch ERP/POS or full website</li><li><i class="fas fa-check"></i> AI automation add-on</li><li><i class="fas fa-check"></i> 3 months support & training</li></ul>
+<a href="contact.html" class="btn btn-fill" style="width:100%;justify-content:center">Get Started</a>
+</div>
+<div class="price-card" data-aos="fade-up" data-aos-delay="160">
+<h3>Enterprise</h3><p style="color:var(--dim);font-size:0.85rem">For large or multi-system operations</p>
+<div class="price">Custom Quote</div>
+<ul><li><i class="fas fa-check"></i> Full ERP + AI automation + web suite</li><li><i class="fas fa-check"></i> Dedicated remote support</li><li><i class="fas fa-check"></i> Ongoing feature development</li></ul>
+<a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center">Talk to Us</a>
+</div>
+</div>
+</section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1200, once: true });
+<section style="background:var(--surface)">
+<div class="sec-head" data-aos="fade-up"><span class="eyebrow">CLIENT FEEDBACK</span><h2>Trusted by growing businesses</h2></div>
+<div class="test-grid wide">
+<div class="t-card" data-aos="fade-up"><div class="t-stars">★★★★★</div><p>"Our billing used to take hours daily. The POS system SPO built cut that to minutes."</p><div class="t-person"><div class="t-avatar"><i class="fas fa-store"></i></div><div><div class="t-name">Retail Owner</div><div class="t-role">Multi-branch Store</div></div></div></div>
+<div class="t-card" data-aos="fade-up" data-aos-delay="80"><div class="t-stars">★★★★★</div><p>"The automation system replies to customers while we sleep. Response time went from hours to seconds."</p><div class="t-person"><div class="t-avatar"><i class="fas fa-headset"></i></div><div><div class="t-name">Service Business Owner</div><div class="t-role">Client Services</div></div></div></div>
+<div class="t-card" data-aos="fade-up" data-aos-delay="160"><div class="t-stars">★★★★★</div><p>"Our website went from invisible on Google to page one within months of working together."</p><div class="t-person"><div class="t-avatar"><i class="fas fa-briefcase"></i></div><div><div class="t-name">Agency Founder</div><div class="t-role">Professional Services</div></div></div></div>
+</div>
+</section>
 
-        // Accordion Logic
-        document.querySelectorAll('.accordion').forEach(acc => {
-            acc.addEventListener('click', () => {
-                acc.classList.toggle('open');
-                const icon = acc.querySelector('i');
-                icon.className = acc.classList.contains('open') ? 'fas fa-minus' : 'fas fa-plus';
-            });
-        });
+<section>
+<div class="sec-head" data-aos="fade-up"><span class="eyebrow">LEADERSHIP</span><h2>The person behind the build</h2></div>
+<div class="team-card" data-aos="fade-up">
+<div class="team-avatar">AA</div>
+<div>
+<h3>Muhammad Asif Ali</h3>
+<div class="role">FOUNDER & CEO</div>
+<p>Founder of SPO Digital Verse, building AI automation, ERP/POS, and web systems for businesses across Pakistan and internationally — hands-on from architecture to deployment.</p>
+<div class="team-soc">
+<a href="https://wa.me/923034480404" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<a href="https://www.facebook.com/share/1EqvcWcyu1/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/smartprinting.online?igsh=MXVjdXMwc2t5bDUzdQ==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+</section>
 
-        // Smooth Scroll for internal anchors
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+<section style="background:var(--surface)">
+<div class="sec-head" data-aos="fade-up"><span class="eyebrow">RELIABILITY</span><h2>Built with security & trust in mind</h2></div>
+<div class="trust-row wide" data-aos="fade-up">
+<div class="trust-item"><i class="fas fa-shield-halved"></i> Encrypted data storage</div>
+<div class="trust-item"><i class="fas fa-cloud-arrow-up"></i> Automatic offline backup</div>
+<div class="trust-item"><i class="fas fa-user-lock"></i> Role-based access control</div>
+<div class="trust-item"><i class="fas fa-arrows-rotate"></i> Remote license management</div>
+<div class="trust-item"><i class="fas fa-headset"></i> Direct founder support</div>
+</div>
+</section>
+
+<section>
+<div class="sec-head" data-aos="fade-up"><span class="eyebrow">INSIGHTS</span><h2>From the SPO knowledge base</h2></div>
+<div class="blog-grid wide">
+<div class="blog-card" data-aos="fade-up"><div class="blog-thumb"><i class="fas fa-robot"></i></div><div class="blog-body"><span class="blog-tag">AUTOMATION</span><h4>Why offline-first matters for local businesses</h4><p>How systems that work without internet keep businesses running during outages.</p></div></div>
+<div class="blog-card" data-aos="fade-up" data-aos-delay="80"><div class="blog-thumb"><i class="fas fa-chart-line"></i></div><div class="blog-body"><span class="blog-tag">ERP/POS</span><h4>Choosing a POS system for multi-branch retail</h4><p>Key features to check before switching from manual ledgers to software.</p></div></div>
+<div class="blog-card" data-aos="fade-up" data-aos-delay="160"><div class="blog-thumb"><i class="fas fa-magnifying-glass"></i></div><div class="blog-body"><span class="blog-tag">SEO</span><h4>Local SEO checklist for 2026</h4><p>The technical fixes that move small business websites onto page one.</p></div></div>
+</div>
+</section>
+
+<section id="faq">
+<div class="sec-head" data-aos="fade-up"><span class="eyebrow">FAQ</span><h2>Common questions</h2></div>
+<div class="faq-wrap">
+<div class="acc"><div class="acc-head">What makes SPO builds different?<i class="fas fa-plus"></i></div><div class="acc-body">We build offline-first architectures, so your systems stay usable even without a stable internet connection.</div></div>
+<div class="acc"><div class="acc-head">Do you work with international clients?<i class="fas fa-plus"></i></div><div class="acc-body">Yes. We deliver automation, ERP/POS and web projects for clients across Pakistan and internationally, fully remote.</div></div>
+<div class="acc"><div class="acc-head">What payment methods do you accept?<i class="fas fa-plus"></i></div><div class="acc-body">Bank transfer, JazzCash, EasyPaisa, and international payment options depending on project location.</div></div>
+<div class="acc"><div class="acc-head">Can you build a custom POS/ERP for my industry?<i class="fas fa-plus"></i></div><div class="acc-body">Yes — our systems are built to be reconfigured across retail, services, and multi-branch business models.</div></div>
+</div>
+<div style="text-align:center;margin-top:44px" data-aos="fade-up"><a href="faq.html" class="btn btn-outline">View All FAQs</a></div>
+</section>
+
+<section style="background:var(--surface)">
+<div class="news-box" data-aos="fade-up">
+<h3 class="disp">Get a free automation audit</h3>
+<p>Tell us your business type — we'll send back 3 quick wins you can automate this month.</p>
+<form class="news-form" onsubmit="event.preventDefault();window.location.href='mailto:asif.aimarketing@gmail.com?subject=Free Automation Audit Request&body=Please send me a free automation audit. My email: '+document.getElementById('newsEmail').value;">
+<input type="email" id="newsEmail" placeholder="you@company.com" required>
+<button type="submit">Request Audit</button>
+</form>
+</div>
+</section>
+
+<section id="contact-preview">
+<div class="sec-head" data-aos="fade-up"><span class="eyebrow">GET IN TOUCH</span><h2>Let's build your system</h2><p>Tell us about your business and we'll reply within 24 hours.</p></div>
+<div class="contact-grid wide">
+<form class="c-form" id="contactForm">
+<div class="f-row"><div><label for="cName">Full Name</label><input type="text" id="cName" placeholder="Your name"></div><div><label for="cEmail">Email</label><input type="email" id="cEmail" placeholder="you@company.com"></div></div>
+<div class="f-row"><div><label for="cPhone">Phone / WhatsApp</label><input type="tel" id="cPhone" placeholder="+92 3XX XXXXXXX"></div><div><label for="cService">Service Interested In</label><select id="cService"><option>AI Automation</option><option>POS & ERP System</option><option>Website Development</option><option>SEO Services</option><option>Digital Marketing</option></select></div></div>
+<div><label for="cMsg">Project Details</label><textarea id="cMsg" placeholder="Tell us about your business and requirements..."></textarea></div>
+<div class="submit-row"><button type="button" class="b-send email" id="sendEmail"><i class="fas fa-envelope"></i> Send via Email</button><button type="button" class="b-send wa" id="sendWa"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button></div>
+</form>
+<div class="c-info" data-aos="fade-up">
+<div class="i-row"><i class="fas fa-phone"></i><div><h5>Call / WhatsApp</h5><p>+92 303 4480404</p></div></div>
+<div class="i-row"><i class="fas fa-envelope"></i><div><h5>Email</h5><p>asif.aimarketing@gmail.com</p></div></div>
+<div class="i-row"><i class="fas fa-globe"></i><div><h5>Website</h5><p>www.spodigitalverse.online</p></div></div>
+<div class="i-row"><i class="fas fa-earth-asia"></i><div><h5>Availability</h5><p>Serving clients across Pakistan and internationally, fully remote</p></div></div>
+<div class="soc">
+<a href="https://wa.me/923034480404" class="wa" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<a href="https://www.facebook.com/share/1EqvcWcyu1/" class="fb" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/smartprinting.online?igsh=MXVjdXMwc2t5bDUzdQ==" class="ig" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://www.tiktok.com/@smartprintdigitalpk" class="tt" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+</div>
+</div>
+</div>
+</section>
+
+<footer id="contact">
+<div class="f-grid">
+<div class="f-about"><h2>SPO Digital Verse</h2><p>Muhammad Asif Ali leads SPO Digital Verse, an agency building AI automation, ERP/POS platforms, and web systems for businesses across Pakistan and worldwide.</p>
+<div class="soc" style="margin-top:20px">
+<a href="https://wa.me/923034480404" class="wa" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<a href="https://www.facebook.com/share/1EqvcWcyu1/" class="fb" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/smartprinting.online?igsh=MXVjdXMwc2t5bDUzdQ==" class="ig" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://www.tiktok.com/@smartprintdigitalpk" class="tt" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+</div>
+</div>
+<div class="f-col"><h5>COMPANY</h5><ul class="f-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+<div class="f-col"><h5>SERVICES</h5><ul class="f-links"><li><a href="services.html#automation">AI Automation</a></li><li><a href="services.html#pos-erp">POS & ERP</a></li><li><a href="services.html#web-development">Web Development</a></li><li><a href="services.html#seo">SEO Services</a></li><li><a href="services.html#marketing">Digital Marketing</a></li></ul></div>
+<div class="f-col"><h5>CONTACT</h5><p style="color:var(--dim);margin-bottom:16px;font-size:0.9rem"><i class="fas fa-phone" style="color:var(--primary)"></i> +92 303 4480404</p><p style="color:var(--dim);margin-bottom:16px;font-size:0.9rem"><i class="fas fa-envelope" style="color:var(--primary)"></i> asif.aimarketing@gmail.com</p><p style="color:var(--dim);margin-bottom:16px;font-size:0.9rem"><i class="fas fa-globe" style="color:var(--primary)"></i> spodigitalverse.online</p></div>
+</div>
+<div class="f-bottom">&copy; 2026 SPO DIGITAL VERSE. ALL RIGHTS RESERVED. — BUILT BY MUHAMMAD ASIF ALI.<div style="margin-top:12px"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="contact.html">Contact</a></div></div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+<p>Ready to automate your business? <span>Book a free 15-minute consultation call</span></p>
+<a href="contact.html" class="btn btn-fill" style="padding:12px 24px">Book a Call</a>
+</div>
+
+<a href="https://wa.me/923034480404" class="wa-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({duration:800,once:true});
+document.querySelectorAll('.acc').forEach(a=>{a.addEventListener('click',()=>{a.classList.toggle('open');const i=a.querySelector('.acc-head i');if(i)i.className=a.classList.contains('open')?'fas fa-minus':'fas fa-plus';});});
+const burger=document.getElementById('burger'),navMenu=document.getElementById('navMenu');
+burger.addEventListener('click',()=>{burger.classList.toggle('open');navMenu.classList.toggle('open');});
+document.querySelectorAll('.nav-menu a').forEach(a=>a.addEventListener('click',()=>{burger.classList.remove('open');navMenu.classList.remove('open');}));
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){const t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
+function getFormData(){return{name:document.getElementById('cName').value||'N/A',email:document.getElementById('cEmail').value||'N/A',phone:document.getElementById('cPhone').value||'N/A',service:document.getElementById('cService').value,msg:document.getElementById('cMsg').value||'N/A'};}
+document.getElementById('sendEmail').addEventListener('click',()=>{const d=getFormData();const body=`Name: ${d.name}%0AEmail: ${d.email}%0APhone: ${d.phone}%0AService: ${d.service}%0A%0AMessage:%0A${encodeURIComponent(d.msg)}`;window.location.href=`mailto:asif.aimarketing@gmail.com?subject=New Inquiry - ${encodeURIComponent(d.service)}&body=${body}`;});
+document.getElementById('sendWa').addEventListener('click',()=>{const d=getFormData();const text=`Hello SPO Digital Verse, I'm ${d.name}.%0AEmail: ${d.email}%0AService: ${d.service}%0A%0AMessage: ${encodeURIComponent(d.msg)}`;window.open(`https://wa.me/923034480404?text=${text}`,'_blank');});
+
+/* Count-up stats */
+const counters=document.querySelectorAll('.stat .n');
+const counterObs=new IntersectionObserver((entries)=>{
+entries.forEach(e=>{
+if(e.isIntersecting){
+const el=e.target,target=+el.dataset.count;let cur=0;
+const step=Math.max(1,Math.ceil(target/40));
+const timer=setInterval(()=>{cur+=step;if(cur>=target){cur=target;clearInterval(timer);}el.textContent=cur;},30);
+counterObs.unobserve(el);
+}
+});
+},{threshold:0.5});
+counters.forEach(c=>counterObs.observe(c));
+
+/* Sticky CTA on scroll */
+const stickyCta=document.getElementById('stickyCta');
+let lastY=0;
+window.addEventListener('scroll',()=>{
+const y=window.scrollY;
+if(y>900){stickyCta.classList.add('show');}else{stickyCta.classList.remove('show');}
+lastY=y;
+});
+</script>
 </body>
 </html>
